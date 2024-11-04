@@ -1,19 +1,24 @@
 from openpyxl import load_workbook
-from os import system
+from os import system, name
+from colorama import Fore, Style
+
+
+def verificar_sistema():
+	if name == "nt":
+		system("cls")
+	else:
+		system("clear")
 
 try:
-	# abrir o arquivo
 	workbook = load_workbook('registros.xlsx')
 except:
 	print("o arquivo foi removido patrão")
 
 class excel():
-	"""
-	docstrings here
-	"""
 	def __init__(self):
 		pass
 
+	
 	def alterar_valor(self, planilha, row, itera, column):
 		if planilha != "3":
 			sheet = workbook[planilha]
@@ -59,50 +64,54 @@ qual planilha quer editar:
 			case "4":
 				self.alterar_valor("JOGOS", 4, 20, "c")
 
-	def ler_planilha(self, planilha, row, itera, column):
-		if planilha != "3":
+
+	def exibir_planilha(self, planilha, row, itera, column):
+		if planilha != 3:
 			sheet = workbook[planilha]
-			print("\n")
 			for x in range(itera):
-				cell_name = sheet[column + str(row)].value
-				print(cell_name)
+				cell = Fore.GREEN + column + str(row) + Fore.RESET
+				cell_value = sheet[column + str(row)].value
+				print(f"{cell}: {cell_value}")
 				row += 1
+
 		else:
 			sheet = workbook[planilha]
 			for x in range(itera):
+				cell = Fore.GREEN + column[0] + str(row) + Fore.RESET
 				cell_name = sheet[column[0] + str(row)].value
 				cell_value = sheet[column[1] + str(row)].value
-				print(f"{cell_name}:{cell_value}")
+				print(f"{cell}: {cell_name}: {cell_value}")
 				row += 1
 
-	def abrir_planilha(self):
-		choice = input("""
+	def chamar_planilha(self):
+		choice = int(input("""
 qual planilha quer abrir:
 1- filmes
 2- mangas
 3- digital tamers
 4- jogos
-""")
+"""))
+		print("\n")
 		
 		match choice:
-			case "1":
-				self.ler_planilha('FILMES', 2, 7, 'a')
+			case 1:
+				self.exibir_planilha('FILMES', 2, 7, 'a')
 
-			case "2":
-				self.ler_planilha('MANGAS', 2, 63, 'a')
+			case 2:
+				self.exibir_planilha('MANGAS', 2, 63, 'a')
 
-			case "3":
-				self.ler_planilha("DIGITAL TAMERS", 10, 26, ["c", "d"])
+			case 3:
+				self.exibir_planilha("DIGITAL TAMERS", 10, 26, ["c", "d"])
 
-			case "4":
-				self.ler_planilha('JOGOS', 4, 20, 'c')
+			case 4:
+				self.exibir_planilha('JOGOS', 4, 20, 'c')
 		
-		other = input("\ndeseja editar alguma planilha: ").lower()
-		if other == "s":
+		choice = input("\ndeseja editar alguma planilha: ").lower()
+		if choice == "s":
 			self.editar_planilha()
 		else:
-			system("clear")
+			verificar_sistema()
 			print("chau então")
 
 sasa = excel()
-sasa.abrir_planilha()
+sasa.chamar_planilha()
