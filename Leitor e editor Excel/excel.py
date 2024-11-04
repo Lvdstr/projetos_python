@@ -1,8 +1,9 @@
 from openpyxl import load_workbook
+from os import system
 
 try:
 	# abrir o arquivo
-	workbook = load_workbook('/data/data/com.termux/files/home/storage/shared/documents/excel/registros.xlsx')
+	workbook = load_workbook('registros.xlsx')
 except:
 	print("o arquivo foi removido patrão")
 
@@ -13,17 +14,28 @@ class excel():
 	def __init__(self):
 		pass
 
-	def shinshin(self, planilha, row, itera, column):
-		sheet = workbook[planilha]
-		row = row
-		for x in range(itera):
-			cell_name = sheet[column + str(row)].value
-			print(f"{column + str(row)} :{cell_name}")
-			row += 1
-		celula = input("digite nome da célula que quer modificar: ")
-		new_value = input("digite o novo valor: ").upper()
-		sheet[celula] = new_value
-		workbook.save('/data/data/com.termux/files/home/storage/shared/documents/excel/registros.xlsx')
+	def alterar_valor(self, planilha, row, itera, column):
+		if planilha != "3":
+			sheet = workbook[planilha]
+			for x in range(itera):
+				cell_name = sheet[column + str(row)].value
+				print(f"{column + str(row)}:{cell_name}")
+				row += 1
+			celula = input("digite nome da célula que quer modificar: ")
+			new_value = input(f"digite o novo valor da celula {celula}: ").upper()
+			sheet[celula] = new_value
+			workbook.save('registros.xlsx')
+
+		else:
+			sheet = workbook[planilha]
+			for x in range(itera):
+				cell_name = sheet[column[0] + str(row)].value
+				cell_value = sheet[column[1] + str(row)].value
+				print(f"{cell_name}:{cell_value}")
+			edit = input("digite o nome da célula que quer modificar: ")
+			value = input(f"digite o novo valor da celula {edit}: ")
+			sheet[edit] = value
+			workbook.save('registros.xlsx')
 
 	def editar_planilha(self):
 		choice = input("""
@@ -36,35 +48,32 @@ qual planilha quer editar:
 	
 		match choice:
 			case "1":
-				self.shinshin("FILMES", 2, 7, "a")
-			case "2":
-				self.shinshin("MANGAS", 2, 63, "a")
-			case "3":			
-				# Selecionar a planilha pelo nome
-				sheet = workbook['DIGITAL TAMERS']
-				
-				# Ler o conteúdo de uma célula específica (por exemplo, A1)
-				number = 10
-				for x in range(26):
-					number += 1
-					# concatena o nome da coluna que é uma letra com o numero da variavel que é aumentado toda vez pela iteração fo for
-					cell_name = sheet['c' + str(number)].value
-					cell_value = sheet['d' + str(number)].value
-					print(f"{cell_name}:{cell_value}")
-				edit = input("digite a célula que quer modificar: ")
-				value = input("digite o valor: ")
-				sheet[edit] = value
-				workbook.save('/data/data/com.termux/files/home/storage/shared/documents/excel/registros.xlsx')
-			case "4":
-				self.shinshin("JOGOS", 4, 20, "c")
+				self.alterar_valor("FILMES", 2, 7, "a")
 
-	def sasa(self, planilha, row, itera, column):
-		sheet = workbook[planilha]
-		row = row
-		for x in range(itera):
-			cell_name = sheet[column + str(row)].value
-			print(cell_name)
-			row += 1
+			case "2":
+				self.alterar_valor("MANGAS", 2, 63, "a")
+
+			case "3":
+				self.alterar_valor("DIGITAL TAMERS", 10, 26, ["c", "d"])	
+
+			case "4":
+				self.alterar_valor("JOGOS", 4, 20, "c")
+
+	def ler_planilha(self, planilha, row, itera, column):
+		if planilha != "3":
+			sheet = workbook[planilha]
+			print("\n")
+			for x in range(itera):
+				cell_name = sheet[column + str(row)].value
+				print(cell_name)
+				row += 1
+		else:
+			sheet = workbook[planilha]
+			for x in range(itera):
+				cell_name = sheet[column[0] + str(row)].value
+				cell_value = sheet[column[1] + str(row)].value
+				print(f"{cell_name}:{cell_value}")
+				row += 1
 
 	def abrir_planilha(self):
 		choice = input("""
@@ -77,28 +86,22 @@ qual planilha quer abrir:
 		
 		match choice:
 			case "1":
-				self.sasa('FILMES', 2, 9, 'a')
+				self.ler_planilha('FILMES', 2, 7, 'a')
+
 			case "2":
-				self.sasa('MANGAS', 2, 63, 'a')
+				self.ler_planilha('MANGAS', 2, 63, 'a')
+
 			case "3":
-				# Selecionar a planilha pelo nome
-				sheet = workbook['DIGITAL TAMERS']
-				
-				# Ler o conteúdo de uma célula específica (por exemplo, A1)
-				number = 10
-				for x in range(26):
-					number += 1
-					# concatena o nome da coluna que é uma letra com o numero da variavel que é aumentado toda vez pela iteração fo for
-					cell_name = sheet['c' + str(number)].value
-					cell_value = sheet['d' + str(number)].value
-					print(f"{cell_name}:{cell_value}")
+				self.ler_planilha("DIGITAL TAMERS", 10, 26, ["c", "d"])
+
 			case "4":
-				self.sasa('JOGOS', 4, 20, 'c')
+				self.ler_planilha('JOGOS', 4, 20, 'c')
 		
 		other = input("\ndeseja editar alguma planilha: ").lower()
 		if other == "s":
 			self.editar_planilha()
 		else:
+			system("clear")
 			print("chau então")
 
 sasa = excel()
