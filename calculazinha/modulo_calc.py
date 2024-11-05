@@ -1,13 +1,20 @@
-from tinydb import TinyDB, Query
+from tinydb import TinyDB
+from time import sleep
+from os import system, name
 
 lista = []
 db = TinyDB('historico.json')
+
+def verificar_sistema():
+	if name == "nt":
+		system("cls")
+	else:
+		system("clear")
 
 def registrar_banco(registro):
 	db.insert({"conta_realizada:": registro})
 
 def calc_basica(valor1, valor2):
-	database = TinyDB('caculadora1.json')
 	operacao = input('''
 escolha a operacao
 + para adicao
@@ -19,23 +26,26 @@ escolha a operacao
 ** para exponencial:
 ''')
 	
-	operações = {
-		"+": valor1 + valor2,
-		"-": valor1 - valor2,
-		"*": valor1 * valor2,
-		"/": valor1 / valor2,
-		"**": valor1 * valor2,
-		"//": valor1 // valor2,
-		"%": valor1 % valor2
-	}
-	
-	print(f"{valor1} {operacao} {valor2} = {operações.get(operacao)}")
-	result = f"{valor1} {operacao} {valor2}"
-	registrar_banco(result)
-
+	if operacao not in ["+", "-", "/", "*", "%", "//", "**"]:
+		print(f"{operacao} não é um operador matematico, amigao")
+		sleep(0.6)
+		verificar_sistema()
+	else:	
+		operações = {
+			"+": valor1 + valor2,
+			"-": valor1 - valor2,
+			"*": valor1 * valor2,
+			"/": valor1 / valor2,
+			"**": valor1 * valor2,
+			"//": valor1 // valor2,
+			"%": valor1 % valor2
+		}
+		
+		print(f"{valor1} {operacao} {valor2} = {operações.get(operacao)}")
+		result = f"{valor1} {operacao} {valor2}"
+		registrar_banco(result)
 
 def calc_porcentagi(valor1, valor2):
-	database = TinyDB('caculadora2.json')
 	print("""
 esta calculadora oferece opções
 relacionadas a cálculo de porcentagem de
@@ -58,15 +68,13 @@ de outro\n
 		registrar_banco(result)
 
 def calc_desconto(valor1, valor2):
-	database = TinyDB('caculadora3.json')
-  print("Calcule o valor de um produto com desconto")
-  valor_com_desconto = valor1 - (valor1 * valor2 / 100)
-  result = f"{valor1} menos {valor2} % = {valor_com_desconto}"
-  registrar_banco(result)
-  print(f"Esse é o valor do produto com desconto: {valor_com_desconto}$ reais")
+	print("Calcule o valor de um produto com desconto")
+	valor_com_desconto = valor1 - (valor1 * valor2 / 100)
+	result = f"{valor1} menos {valor2} % = {valor_com_desconto}"
+	registrar_banco(result)
+	print(f"Esse é o valor do produto com desconto: {valor_com_desconto}$ reais")
 
 def calc_media():
-	database = TinyDB('caculadora4.json')
 	quanti_notas = int(input("digite quanto notas ira calcular: "))
 	for x in range(quanti_notas):
 		x += 1
@@ -79,7 +87,6 @@ def calc_media():
 	print(f"a media de {len(lista)} notas eh {resultado}")
 
 def calc_medidas():
-	database = TinyDB('caculadora5.json')
 	number = int(input("digite um valor para ser convertido: "))
 	metros_for_centimetros = float(input("""
 deseja converter:
