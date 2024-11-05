@@ -1,5 +1,7 @@
 from colorama import Fore, Style
 from tinydb import TinyDB, Query
+from os import system, name
+from time import sleep
 
 database = TinyDB('respostas.json')
 
@@ -39,6 +41,12 @@ perguntas = {
 
 respostas = []
 
+def verificar_sistema():
+	if name == "nt":
+		system("cls")
+	else:
+		system("clear")
+
 def registrar_pontos(value):
 	salvar_pontos = input("quer salvar teus pontos: ")
 	if salvar_pontos == 's':
@@ -54,11 +62,13 @@ def exibir_respostas():
 	res = input("resposta: ")
 	respostas.append(res)
 	print(' ')
+	if len(respostas) == 9:
+		exibirRespostasCorretas()
 
 def exibir_perguntas():
 	iteracao = 1
 	for x in range(len(perguntas)):
-		print(perguntas.get('pergunta' + str(iteracao)))
+		print(f"{iteracao}: {perguntas.get('pergunta' + str(iteracao))}")
 		iteracao += 1
 		exibir_respostas()
 
@@ -76,11 +86,13 @@ def exibirRespostasCorretas():
 
 def iniciar_quizz():
 	print("bem vindo ao joguin de quizz")
-	per = input('deseja jogar o quizz: ').lower()
-	if per == 's':
+	pergunta = input('deseja jogar o quizz: ').lower()
+	if pergunta == 's':
 		exibir_perguntas()
 	else:
 		print('chau')
+		sleep(0.7)
+		verificar_sistema()
 
 iniciar_quizz()
-exibirRespostasCorretas()
+#exibirRespostasCorretas()
