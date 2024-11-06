@@ -1,16 +1,24 @@
-from os import system, path, remove, rename
+from os import system, path, remove, rename, name
 from time import sleep
+from colorama import Fore, Style
 
 comandos = {
 	"comando1": "ls",
 	"comando2": "cd .."
 }
 
+def verificar_sistema():
+	if name == "nt":
+		system("dir")
+	else:
+		system("ls")
+
 def criar_arquivo(nome):
 	try:
 		criar_arquivo = open(nome, "w")
 		sleep(2)
-		system(comandos.get("comando1"))
+		print(f"{Fore.GREEN + nome + Fore.RESET} criado com sucesso")
+		verificar_sistema()
 	except:
 		print("não foi possivel a criação do arquivo")
 	finally:
@@ -36,7 +44,7 @@ def deletar_arquivo(nome_arquivo):
 		print("o arquivo não existe para ser deletado")
 
 def deletar_multiplos(extensao):
-		os.system(f"rm *{extensao}")
+		system(f"rm *{extensao}")
 
 def renomear_arquivo(antigo_nome, novo_nome):
 	if path.exists(antigo_nome):
@@ -57,7 +65,7 @@ def renomear_multiplos(nomes, novos_nomes):
 	
 def ler_arquivo(nome):
 	if path.exists(nome):
- 		system("cat " + nome)
+		system("cat " + nome)
 	else:
 		print("o arquivo não existe para ser lido")
 
