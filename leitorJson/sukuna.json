@@ -1,0 +1,20 @@
+[
+    {
+        "name": "John",
+        "age": 30, 
+        "city": "New York",
+        "powers": [
+            "domain expansion",
+            "kekijutsu",
+            "all for one"
+        ],
+        "sasa": "soco"
+    },
+    {
+        "name": "John",
+        "age": 30, 
+        "city": "New York",
+        "powers": "domain expansion",
+        "sasa": "soco"
+    }
+]
