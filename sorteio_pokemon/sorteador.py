@@ -2,7 +2,7 @@ from random import choice
 from tinydb import TinyDB, Query
 from colorama import Fore, Style
 from os import name, system
-from dados import malevolente
+from dados import iniciar_exibição
 
 User = Query()
 db = TinyDB('historico.json')
@@ -58,7 +58,7 @@ def registrarNoBanco(values):
         else:
             db.insert({"pokemon_sorteado": x})
             print(Fore.GREEN + x + Fore.RESET)
-    malevolente(pokemons)
+    iniciar_exibição(pokemons)
 
 	
 def sortear_pokemons(quanti_pokes):

@@ -99,7 +99,7 @@ krabby
 kingler
 voltorb
 electrode
-exeggcute
+exeggute
 exeggutor
 cubone
 marowak

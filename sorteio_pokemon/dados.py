@@ -3,19 +3,19 @@ from random import choice
 from colorama import Fore, Style
 
 
-def iterar_valoresLista(value):
+def iterar_valores_Lista(value):
     if type(value) == list:
         return f"{value[0]}, {value[1]}"
     else:
         return value
 
-def ler_json(pokes):
+def exibir_dados(pokes):
     with open('sasa.json', 'r', encoding='utf-8') as arquivo:
         dados = json.load(arquivo)
 
     pokemon = dados[pokes]
-    evolucao = iterar_valoresLista(pokemon["evolução"])
-    tipo = iterar_valoresLista(pokemon["tipo"])
+    evolucao = iterar_valores_Lista(pokemon["evolução"])
+    tipo = iterar_valores_Lista(pokemon["tipo"])
     
     format = [
         f"nome: {Fore.GREEN + pokemon["nome"] + Fore.RESET}",
@@ -31,11 +31,10 @@ def remove_caracteres_especificos(texto):
     caracteres_para_remover = "\n"
     return ''.join([char for char in texto if char not in caracteres_para_remover])
 
-
-def malevolente(pokes):
+def iniciar_exibição(pokes):
     lista_limpa = []
     for x in pokes:
         new = remove_caracteres_especificos(x)
         lista_limpa.append(new)
     for x in lista_limpa:
-        ler_json(x)
+        exibir_dados(x)
