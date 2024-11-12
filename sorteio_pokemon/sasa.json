@@ -1,0 +1,986 @@
+{
+    "bulbasaur": {
+        "nome": "bulbasaur",
+        "tipo": [
+            "planta",
+            "venenoso"
+        ],
+        "evolução": [
+            "nivel 16: ivysaur",
+            "nivel 32: venusaur"
+        ]
+    },
+    "ivysaur": {
+        "nome": "ivysaur",
+        "tipo": [
+            "planta",
+            "venenoso"
+        ],
+        "evolução": "nivel 32: venusaur"
+    },
+    "vensaur": {
+        "nome": "venusaur",
+        "tipo": [
+            "planta",
+            "venenoso"
+        ],
+        "evolução": "não possui"
+    },
+    "charmander": {
+        "nome": "charmander",
+        "tipo": "fogo",
+        "evolução": [
+            "nivel 16: charmeleon",
+            "nivel 36: charizard"
+        ]
+    },
+    "charmeleon": {
+        "nome": "charmeleon",
+        "tipo": "fogo",
+        "evolução": "nivel 36: charizard"
+    },
+    "charizard": {
+        "nome": "charizard",
+        "tipo": [
+            "fogo",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "squirtle": {
+        "nome": "squirtle",
+        "tipo": "água",
+        "evolução": [
+            "nivel 16: wartortle",
+            "nivel 36: blastoise"
+        ]
+    },
+    "wartortle": {
+        "nome": "wartortle",
+        "tipo": "água",
+        "evolução": "nivel 36: blastoise"
+    },
+    "blastoise": {
+        "nome": "blastoise",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "caterpie": {
+        "nome": "caterpie",
+        "tipo": "inseto",
+        "evolução": [
+            "nivel 7: metapod",
+            "nivel 10: butterfree"
+        ]
+    },
+    "metapod": {
+        "nome": "metapod",
+        "tipo": "inseto",
+        "evolução": "nivel 10: butterfree"
+    },
+    "butterfree": {
+        "nome": "butterfree",
+        "tipo": "inseto",
+        "evolução": "não possui"
+    },
+    "weedle": {
+        "nome": "weedle",
+        "tipo": [
+            "inseto",
+            "venenoso"
+        ],
+        "evolução": [
+            "nivel 7: kakuna",
+            "nivel 10: beedrill"
+        ]
+    },
+    "kakuna": {
+        "nome": "kakuna",
+        "tipo": [
+            "inseto",
+            "venenoso"
+        ],
+        "evolução": "nivel 10: beedrill"
+    },
+    "beedrill":{
+        "nome": "beedrill",
+        "tipo": [
+            "inseto",
+            "venenoso"
+        ],
+        "evolução": "não possui"
+    },
+    "pidgey": {
+        "nome": "pidgey",
+        "tipo": [
+        "normal",
+        "voador"
+        ],
+        "evolução": [
+        "nivel 18: pidgeotto",
+        "nivel 36: pidgeot"
+        ]
+    },
+    "pidgeotto": {
+        "nome": "pidgeotto",
+        "tipo": [
+        "normal",
+        "voador"
+        ],
+        "evolução": "nivel 36: pidgeot"
+    },
+    "pidgeot": {
+        "nome": "pidgeot",
+        "tipo": [
+        "normal",
+        "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "rattata": {
+        "nome": "rattata",
+        "tipo": "normal",
+        "evolução": "nivel 20: raticate"
+    },
+    "raticate": {
+        "nome": "raticate",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "spearow": {
+        "nome": "spearow",
+        "tipo": [
+        "normal",
+        "voador"
+        ],
+        "evolução": "nivel 20: fearow"
+    },
+    "fearow": {
+        "nome": "fearow",
+        "tipo": [
+        "normal",
+        "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "ekans": {
+        "nome": "ekans",
+        "tipo": "venenoso",
+        "evolução": "nivel 22: arbok"
+    },
+    "arbok": {
+        "nome": "arbok",
+        "tipo": "venenoso",
+        "evolução": "não possui"
+    },
+    "pikachu": {
+        "nome": "pikachu",
+        "tipo": "elétrico",
+        "evolução": "pedra trovão: raichu"
+    },
+    "raichu": {
+        "nome": "raichu",
+        "tipo": "elétrico",
+        "evolução": "não possui"
+    },
+    "sandshrew": {
+        "nome": "sandshrew",
+        "tipo": "terra",
+        "evolução": "nivel 22: sandslash"
+    },
+    "sandslash": {
+        "nome": "sandslash",
+        "tipo": "terra",
+        "evolução": "não possui"
+    },
+    "nidoranF": {
+        "nome": "nidoranF",
+        "tipo": "venenoso",
+        "evolução": [
+        "nivel 16: nidorina",
+        "pedra da lua: nidoqueen"
+        ]
+    },
+    "nidorina": {
+        "nome": "nidorina",
+        "tipo": "venenoso",
+        "evolução": "pedra da lua: nidoqueen"
+    },
+    "nidoqueen": {
+        "nome": "nidoqueen",
+        "tipo": [
+        "venenoso",
+        "terra"
+        ],
+        "evolução": "não possui"
+    },
+    "nidoranM": {
+        "nome": "nidoranM",
+        "tipo": "venenoso",
+        "evolução": [
+        "nivel 16: nidorino",
+        "pedra da lua: nidoking"
+        ]
+    },
+    "nidorino": {
+        "nome": "nidorino",
+        "tipo": "venenoso",
+        "evolução": "pedra da lua: nidoking"
+    },
+    "nidoking": {
+        "nome": "nidoking",
+        "tipo": [
+        "venenoso",
+        "terra"
+        ],
+        "evolução": "não possui"
+    },     
+    "clefairy": {
+        "nome": "clefairy",
+        "tipo": "fada",
+        "evolução": "pedra da lua: clefable"
+    },
+    "clefable": {
+        "nome": "clefable",
+        "tipo": "fada",
+        "evolução": "não possui"
+    },
+    "vulpix": {
+        "nome": "vulpix",
+        "tipo": "fogo",
+        "evolução": "pedra do fogo: ninetales"
+    },
+    "ninetales": {
+        "nome": "ninetales",
+        "tipo": "fogo",
+        "evolução": "não possui"
+    },
+    "jigglypuff": {
+        "nome": "jigglypuff",
+        "tipo": "fada",
+        "evolução": "pedra da lua: wigglytuff"
+    },
+    "wigglytuff": {
+        "nome": "wigglytuff",
+        "tipo": "fada",
+        "evolução": "não possui"
+    },
+    "zubat": {
+        "nome": "zubat",
+        "tipo": [
+        "venenoso",
+        "voador"
+        ],
+        "evolução": "nivel 22: golbat"
+    },
+    "golbat": {
+        "nome": "golbat",
+        "tipo": [
+        "venenoso",
+        "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "oddish": {
+        "nome": "oddish",
+        "tipo": [
+        "planta",
+        "venenoso"
+        ],
+        "evolução": [
+        "nivel 21: gloom",
+        "pedra da folha: vileplume"
+        ]
+    },
+    "gloom": {
+        "nome": "gloom",
+        "tipo": [
+        "planta",
+        "venenoso"
+        ],
+        "evolução": "pedra da folha: vileplume"
+    },
+    "vileplume": {
+        "nome": "vileplume",
+        "tipo": [
+        "planta",
+        "venenoso"
+        ],
+        "evolução": "não possui"
+    },
+    "paras": {
+        "nome": "paras",
+        "tipo": [
+        "inseto",
+        "planta"
+        ],
+        "evolução": "nivel 24: parasect"
+    },
+    "parasect": {
+        "nome": "parasect",
+        "tipo": [
+        "inseto",
+        "planta"
+        ],
+        "evolução": "não possui"
+    },
+    "venonat": {
+        "nome": "venonat",
+        "tipo": [
+        "inseto",
+        "venenoso"
+        ],
+        "evolução": "nivel 31: venomoth"
+    },
+    "venomoth": {
+        "nome": "venomoth",
+        "tipo": [
+        "inseto",
+        "venenoso"
+        ],
+        "evolução": "não possui"
+    },
+    "diglett": {
+        "nome": "diglett",
+        "tipo": "terra",
+        "evolução": "nivel 26: dugtrio"
+    },
+    "dugtrio": {
+        "nome": "dugtrio",
+        "tipo": "terra",
+        "evolução": "não possui"
+    },
+    "meowth": {
+        "nome": "meowth",
+        "tipo": "normal",
+        "evolução": "nivel 28: persian"
+    },
+    "persian": {
+        "nome": "persian",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "psyduck": {
+        "nome": "psyduck",
+        "tipo": "água",
+        "evolução": "nivel 33: golduck"
+    },
+    "golduck": {
+        "nome": "golduck",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "mankey": {
+        "nome": "mankey",
+        "tipo": "lutador",
+        "evolução": "nivel 28: primeape"
+    },
+    "primeape": {
+        "nome": "primeape",
+        "tipo": "lutador",
+        "evolução": "não possui"
+    },
+    "growlithe": {
+        "nome": "growlithe",
+        "tipo": "fogo",
+        "evolução": "pedra do fogo: arcanine"
+    },
+    "arcanine": {
+        "nome": "arcanine",
+        "tipo": "fogo",
+        "evolução": "não possui"
+    },
+    "poliwag": {
+        "nome": "poliwag",
+        "tipo": "água",
+        "evolução": [
+            "nivel 25: poliwhirl",
+            "pedra da água: poliwrath"
+        ]
+    },
+    "poliwhirl": {
+        "nome": "poliwhirl",
+        "tipo": "água",
+        "evolução": "pedra da água: poliwrath"
+    },
+    "poliwrath": {
+        "nome": "poliwrath",
+        "tipo": [
+            "água",
+            "lutador"
+        ],
+        "evolução": "não possui"
+    },
+    "abra": {
+        "nome": "abra",
+        "tipo": "psíquico",
+        "evolução": [
+            "nivel 16: kadabra",
+            "troca: alakazam"
+        ]
+    },
+    "kadabra": {
+        "nome": "kadabra",
+        "tipo": "psíquico",
+        "evolução": "troca: alakazam"
+    },
+    "alakazam": {
+        "nome": "alakazam",
+        "tipo": "psíquico",
+        "evolução": "não possui"
+    },
+    "machop": {
+        "nome": "machop",
+        "tipo": "lutador",
+        "evolução": [
+            "nivel 28: machoke",
+            "troca: machamp"
+        ]
+    },
+    "machoke": {
+        "nome": "machoke",
+        "tipo": "lutador",
+        "evolução": "troca: machamp"
+    },
+    "machamp": {
+        "nome": "machamp",
+        "tipo": "lutador",
+        "evolução": "não possui"
+    },
+    "bellsprout": {
+        "nome": "bellsprout",
+        "tipo": [
+            "planta",
+            "venenoso"
+        ],
+        "evolução": [
+            "nivel 21: weepinbell",
+            "pedra da folha: victreebel"
+        ]
+    },
+    "weepinbell": {
+        "nome": "weepinbell",
+        "tipo": [
+            "planta",
+            "venenoso"
+        ],
+        "evolução": "pedra da folha: victreebel"
+    },
+    "victreebel": {
+        "nome": "victreebel",
+        "tipo": [
+            "planta",
+            "venenoso"
+        ],
+        "evolução": "não possui"
+    },
+    "tentacool": {
+        "nome": "tentacool",
+        "tipo": [
+            "água",
+            "venenoso"
+        ],
+        "evolução": "nivel 30: tentacruel"
+    },
+    "tentacruel": {
+        "nome": "tentacruel",
+        "tipo": [
+            "água",
+            "venenoso"
+        ],
+        "evolução": "não possui"
+    },
+    "geodude": {
+        "nome": "geodude",
+        "tipo": [
+            "pedra",
+            "terra"
+        ],
+        "evolução": [
+            "nivel 25: graveler",
+            "troca: golem"
+        ]
+    },
+    "graveler": {
+        "nome": "graveler",
+        "tipo": [
+            "pedra",
+            "terra"
+        ],
+        "evolução": "troca: golem"
+    },
+    "golem": {
+        "nome": "golem",
+        "tipo": [
+            "pedra",
+            "terra"
+        ],
+        "evolução": "não possui"
+    },
+    "ponyta": {
+        "nome": "ponyta",
+        "tipo": "fogo",
+        "evolução": "nivel 40: rapidash"
+    },
+    "rapidash": {
+        "nome": "rapidash",
+        "tipo": "fogo",
+        "evolução": "não possui"
+    },
+    "slowpoke": {
+        "nome": "slowpoke",
+        "tipo": [
+            "água",
+            "psíquico"
+        ],
+        "evolução": [
+            "nivel 37: slowbro",
+            "troca com king's rock: slowking"
+        ]
+    },
+    "slowbro": {
+        "nome": "slowbro",
+        "tipo": [
+            "água",
+            "psíquico"
+        ],
+        "evolução": "não possui"
+    },
+    "magnemite": {
+        "nome": "magnemite",
+        "tipo": "elétrico",
+        "evolução": "nivel 30: magneton"
+    },
+    "magneton": {
+        "nome": "magneton",
+        "tipo": "elétrico",
+        "evolução": "não possui"
+    },
+    "farfetch'd": {
+        "nome": "farfetch'd",
+        "tipo": [
+            "normal",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "doduo": {
+        "nome": "doduo",
+        "tipo": [
+            "normal",
+            "voador"
+        ],
+        "evolução": "nivel 31: dodrio"
+    },
+    "dodrio": {
+        "nome": "dodrio",
+        "tipo": [
+            "normal",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "seel": {
+        "nome": "seel",
+        "tipo": "água",
+        "evolução": "nivel 34: dewgong"
+    },
+    "dewgong": {
+        "nome": "dewgong",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "grimer": {
+        "nome": "grimer",
+        "tipo": "venenoso",
+        "evolução": "nivel 38: muk"
+    },
+    "muk": {
+        "nome": "muk",
+        "tipo": "venenoso",
+        "evolução": "não possui"
+    },
+    "shellder": {
+        "nome": "shellder",
+        "tipo": "água",
+        "evolução": "pedra da água: cloyster"
+    },
+    "cloyster": {
+        "nome": "cloyster",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "gastly": {
+        "nome": "gastly",
+        "tipo": [
+            "fantasma",
+            "venenoso"
+        ],
+        "evolução": [
+            "nivel 25: haunter",
+            "troca: gengar"
+        ]
+    },
+    "haunter":{
+        "nome": "haunter",
+        "tipo": [
+            "fantasma",
+            "venenoso"
+        ],
+        "evolução": "troca: gengar"
+    },
+    "gengar": {
+        "nome": "gengar",
+        "tipo": [
+            "fantasma",
+            "venenoso"
+        ],
+        "evolução": "não possui"
+    },
+    "onix": {
+        "nome": "onix",
+        "tipo": [
+            "pedra",
+            "terra"
+        ],
+        "evolução": "não possui"
+    },
+    "drowzee": {
+        "nome": "drowzee",
+        "tipo": "psíquico",
+        "evolução": "nivel 26: hypno"
+    },
+    "hpyno": {
+        "nome": "hypno",
+        "tipo": "psíquico",
+        "evolução": "não possui"
+    },
+    "krabby": {
+        "nome": "krabby",
+        "tipo": "água",
+        "evolução": "nivel 28: kingler"
+    },
+    "kingler": {
+        "nome": "kingler",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "voltorb": {
+        "nome": "voltorb",
+        "tipo": "elétrico",
+        "evolução": "nivel 30: electrode"
+    },
+    "electrode": {
+        "nome": "electrode",
+        "tipo": "elétrico",
+        "evolução": "não possui"
+    },
+    "exeggute": {
+        "nome": "exeggcute",
+        "tipo": [
+            "planta",
+            "psíquico"
+        ],
+        "evolução": "pedra da folha: exeggutor"
+    },
+    "exeggutor": {
+        "nome": "exeggutor",
+        "tipo": [
+            "planta",
+            "psíquico"
+        ],
+        "evolução": "não possui"
+    },
+    "cubone": {
+        "nome": "cubone",
+        "tipo": "terra",
+        "evolução": "nivel 28: marowak"
+    },
+    "Marowak": {
+        "nome": "marowak",
+        "tipo": "terra",
+        "evolução": "não possui"
+    },
+    "hitmonlee": {
+        "nome": "hitmonlee",
+        "tipo": "lutador",
+        "evolução": "não possui"
+    },
+    "hitmonchan": {
+        "nome": "hitmonchan",
+        "tipo": "lutador",
+        "evolução": "não possui"
+    },
+    "lickitung": {
+        "nome": "lickitung",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "koffing": {
+        "nome": "koffing",
+        "tipo": "venenoso",
+        "evolução": "nivel 35: weezing"
+    },
+    "weezing": {
+        "nome": "weezing",
+        "tipo": "venenoso",
+        "evolução": "não possui"
+    },
+    "rhyorn": {
+        "nome": "rhyhorn",
+        "tipo": [
+            "terra",
+            "pedra"
+        ],
+        "evolução": "nivel 42: rhydon"
+    },
+    "rhydon": {
+        "nome": "rhydon",
+        "tipo": [
+            "terra",
+            "pedra"
+        ],
+        "evolução": "não possui"
+    },
+    "chansey": {
+        "nome": "chansey",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "tangela": {
+        "nome": "tangela",
+        "tipo": "planta",
+        "evolução": "não possui"
+    },
+    "kangaskhan": {
+        "nome": "kangaskhan",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "horsea": {
+        "nome": "horsea",
+        "tipo": "água",
+        "evolução": "nivel 32: seadra"
+    },
+    "seadra": {
+        "nome": "seadra",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "goldeen": {
+        "nome": "goldeen",
+        "tipo": "água",
+        "evolução": "nivel 33: seaking"
+    },
+    "seaking": {
+        "nome": "seaking",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "staryu": {
+        "nome": "staryu",
+        "tipo": "água",
+        "evolução": "pedra da água: starmie"
+    },
+    "starmie": {
+        "nome": "starmie",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "mr. mime": {
+        "nome": "mr. mime",
+        "tipo": [
+            "psíquico",
+            "fada"
+        ],
+        "evolução": "não possui"
+    },
+    "scyther": {
+        "nome": "scyther",
+        "tipo": "inseto",
+        "evolução": "não possui"
+    },
+    "jynx": {
+        "nome": "jynx",
+        "tipo": [
+            "gelo",
+            "psíquico"
+        ],
+        "evolução": "não possui"
+    },
+    "electabuzz": {
+        "nome": "electabuzz",
+        "tipo": "elétrico",
+        "evolução": "não possui"
+    },
+    "magmar": {
+        "nome": "magmar",
+        "tipo": "fogo",
+        "evolução": "não possui"
+    },
+    "pinsir": {
+        "nome": "pinsir",
+        "tipo": "inseto",
+        "evolução": "não possui"
+    },
+    "tauros": {
+        "nome": "tauros",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "magikarp": {
+        "nome": "magikarp",
+        "tipo": "água",
+        "evolução": "nivel 20: gyarados"
+    },
+    "gyarados": {
+        "nome": "gyarados",
+        "tipo": [
+            "água",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "lapras": {
+        "nome": "lapras",
+        "tipo": [
+            "água",
+            "gelo"
+        ],
+        "evolução": "não possui"
+    },
+    "ditto": {
+        "nome": "ditto",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "eevee": {
+        "nome": "eevee",
+        "tipo": "normal",
+        "evolução": [
+            "pedra da água: vaporeon",
+            "pedra do trovão: jolteon",
+            "pedra do fogo: flareon"
+        ]
+    },
+    "vaporeon": {
+        "nome": "vaporeon",
+        "tipo": "água",
+        "evolução": "não possui"
+    },
+    "jolteon": {
+        "nome": "jolteon",
+        "tipo": "elétrico",
+        "evolução": "não possui"
+    },
+    "flareon": {
+        "nome": "flareon",
+        "tipo": "fogo",
+        "evolução": "não possui"
+    },
+    "porygon": {
+        "nome": "porygon",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "omanyte": {
+        "nome": "omanyte",
+        "tipo": [
+            "pedra",
+            "água"
+        ],
+        "evolução": "nivel 40: omastar"
+    },
+    "omastar": {
+        "nome": "omastar",
+        "tipo": [
+            "pedra",
+            "água"
+        ],
+        "evolução": "não possui"
+    },
+    "kabuto": {
+        "nome": "kabuto",
+        "tipo": [
+            "pedra",
+            "água"
+        ],
+        "evolução": "nivel 40: kabutops"
+    },
+    "kabutops": {
+        "nome": "kabutops",
+        "tipo": [
+            "pedra",
+            "água"
+        ],
+        "evolução": "não possui"
+    },
+    "aerodactyl": {
+        "nome": "aerodactyl",
+        "tipo": [
+            "pedra",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "snorlax": {
+        "nome": "snorlax",
+        "tipo": "normal",
+        "evolução": "não possui"
+    },
+    "articuno": {
+        "nome": "articuno",
+        "tipo": [
+            "gelo",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "zapdos": {
+        "nome": "zapdos",
+        "tipo": [
+            "elétrico",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "moltres": {
+        "nome": "moltres",
+        "tipo": [
+            "fogo",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "dratini": {
+        "nome": "dratini",
+        "tipo": "dragão",
+        "evolução": [
+            "nivel 30: dragonair",
+            "nivel 55: dragonite"
+        ]
+    },
+    "dragonair": {
+        "nome": "dragonair",
+        "tipo": "dragão",
+        "evolução": "nivel 55: dragonite"
+    },
+    "dragonite": {
+        "nome": "dragonite",
+        "tipo": [
+            "dragão",
+            "voador"
+        ],
+        "evolução": "não possui"
+    },
+    "mewtwo": {
+        "nome": "mewtwo",
+        "tipo": "psíquico",
+        "evolução": "não possui"
+    },
+    "mew": {
+        "nome": "mew",
+        "tipo": "psíquico",
+        "evolução": "não possui"
+    }    
+}
