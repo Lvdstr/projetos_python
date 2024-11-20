@@ -10,7 +10,7 @@ def verificar_sistema():
 		system("clear")
 
 try:
-	workbook = load_workbook('registros.xlsx')
+	workbook = load_workbook('/data/data/com.termux/files/home/scripts/exceu/registros.xlsx')
 except:
 	print("o arquivo foi removido patrão")
 
@@ -83,12 +83,12 @@ class excel():
 			self.alterar_valor(planilha, row, column)
 
 	def chamar_planilha(self):
-		choice = input("""
+		choice = input(f"""
 qual planilha quer abrir:
-1- filmes
-2- mangas
-3- digital tamers
-4- jogos
+1- {Fore.GREEN + "filmes" + Fore.RESET}
+2- {Fore.GREEN + "mangas"+ Fore.RESET}
+3- {Fore.GREEN + "digital tamers"+ Fore.RESET}
+4- {Fore.GREEN + "jogos"+ Fore.RESET}
 """ + "\n")
 		match choice:
 			case "1":
