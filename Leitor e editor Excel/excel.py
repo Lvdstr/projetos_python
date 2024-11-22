@@ -1,6 +1,6 @@
 from openpyxl import load_workbook
 from os import system, name
-from colorama import Fore, Style
+from colorama import Fore
 
 
 def verificar_sistema():
@@ -15,39 +15,16 @@ except:
 	print("o arquivo foi removido patrão")
 
 
-def alterar_valor(planilha, row, column):
+def alterar_valor(planilha):
 	alterar = input("deseja alterar ou inserir algum valor: ")
 	if alterar == "" or alterar != "s":
 		verificar_sistema()
 	elif alterar != "":
-		if planilha != "3":
-			sheet = workbook[planilha]
-			while row < 100:
-				cell_name = sheet[column[0] + str(row)].value
-				if cell_name == None:
-					break
-				else:
-					print(f"{column + str(row)}:{cell_name}")
-				row += 1
-			celula = input("digite nome da célula que quer modificar: ")
-			new_value = input(f"digite o novo valor da celula {celula}: ").upper()
-			sheet[celula] = new_value
-			workbook.save('registros.xlsx')
-
-		else:
-			sheet = workbook[planilha]
-			while row < 100:
-				cell_name = sheet[column[0] + str(row)].value
-				cell_value = sheet[column[1] + str(row)].value
-				if cell_name == None:
-					break
-				else:
-					print(f"{cell_name}:{cell_value}")
-			celula = input("digite o nome da célula que quer modificar: ")
-			value = input(f"digite o novo valor da celula {celula}: ")
-			sheet[celula] = value
-			workbook.save('registros.xlsx')
-
+		sheet = workbook[planilha]
+		celula = input("digite nome da célula que quer modificar: ")
+		new_value = input(f"digite o novo valor da celula {celula}: ").upper()
+		sheet[celula] = new_value
+		workbook.save('registros.xlsx')
 
 def exibir_planilha(planilha, row, column):
 	print(planilha)
@@ -65,7 +42,7 @@ def exibir_planilha(planilha, row, column):
 			else:
 				print(f"{cell}: {cell_value}")
 				row += 1
-		alterar_valor(planilha, row, column)
+		alterar_valor(planilha)
 	
 	elif planilha == "MANGAS":
 		sheet = workbook[planilha]
@@ -83,7 +60,7 @@ def exibir_planilha(planilha, row, column):
 			else:
 				print(f"{row}: {cell_value}:  {cell_sasa}")
 				row += 1
-		alterar_valor(planilha, row, column)
+		alterar_valor(planilha)
 	
 	elif planilha == "DIGITAL TAMERS":
 		sheet = workbook[planilha]
@@ -96,7 +73,7 @@ def exibir_planilha(planilha, row, column):
 			else:
 				print(f"{cell}: {cell_name}: {cell_value}")
 				row += 1
-		alterar_valor(planilha, row, column)
+		alterar_valor(planilha)
 
 
 def chamar_planilha():
