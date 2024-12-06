@@ -9,52 +9,53 @@ def iterar_valores_Lista(value):
 
 
 class Json():
+    """
+    """
     def __init__(self, arquivo_name, use_mode):
         self.arquivo_nome = arquivo_name
         self.use_mode = use_mode
 
-    #usa a biblioteca pathlib para identificar a extensão do arquivo
+    def __str__(self):
+        print("em contrução")
+
+
     def IdentificarExtensao(self):
+        """usa a biblioteca pathlib para verificar qual a extensâo do arquivo, e depois retorna a extensão"""
         file_path = Path(self.arquivo_nome)
         extension = file_path.suffix
         return extension
 
 
-    #le o arquivo, básicão memo
     def AbrirJson(self):
-        sasa = self.IdentificarExtensao()
-        if sasa == ".json":
+        """tenta abrir o arquivo, chama a função de verificação, pra confirmar se o arquivo é json, retorna o arquivo para uma função que vai manipular esses dados"""
+        try:
             with open(self.arquivo_nome, self.use_mode) as arquivo:
                 arquivo_legível = json.load(arquivo)
-                return arquivo_legível[0]
-        else:
-            print(f"esse arquivo é do tipo {sasa},\nfoi maus ai menó, so jeison aqui")
-    
-    def PercorrerChaves(self):
-        chavesJson = []
-        JsonPuro = self.AbrirJson()
-        Chaves = JsonPuro.keys()
-        for x in Chaves:
-            chavesJson.append(x)
-        return [JsonPuro, chavesJson]
+
+            verificar = self.IdentificarExtensao()
+            if verificar == ".json":
+                return arquivo_legível
+            else:
+                print(f"esse arquivo é do tipo {verificar},\nfoi maus ai menó, so jeison aqui")
+
+        except FileNotFoundError:
+            print("erro zézinho")
     
     def arquivoNormal(self, conteudo):
+        """cria um arquivo de texto normal com os valores do json"""
         with open("sasa.txt", "a") as new:
             for x in conteudo:
                 new.write(x)
     
     def leiturasasa(self):
-        nada = []
-        # pega a lista do return 
-        value = self.PercorrerChaves()
-        #atribuindo cada um dos itens a uma variavel diferente
-        index1 = value[0] # index1 = JsonPuro
-        index2 = value[1] # index2 = chavesJson
-        for x in index1:
-            a = f"{x}: {index1[x]}"
-            nada.append(a + "\n")
-            print(a)
-        self.arquivoNormal(nada)
+        """itera sobre os itens chave:valor do dicionario json, se for uma lista chama a função iterar pra formatar a impressão"""
+        pegarJson = self.AbrirJson()
+        for x in pegarJson:
+            print(f"{x}: {iterar_valores_Lista(pegarJson[x])}")
 
 teste = Json("sukuna.json", "r")
+
 teste.leiturasasa()
+
+#exibe as docstrings dos métodos da classe
+#print(teste.AbrirJson.__doc__)
