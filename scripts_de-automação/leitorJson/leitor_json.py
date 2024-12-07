@@ -2,10 +2,8 @@ import json
 from pathlib import Path
 
 def iterar_valores_Lista(value):
-    if type(value) == list:
-        return f"{value[0]}, {value[1]}"
-    else:
-        return value
+    if type(value) == list: return f"{value[0]}, {value[1]}"
+    else: return value
 
 
 class Json():

@@ -4,10 +4,8 @@ from openpyxl import load_workbook
 
 
 def verificar_sistema():
-	if name == "nt":
-		system("cls")
-	else:
-		system("clear")
+	if name == "nt": system("cls")
+	else: system("clear")
 
 try:
 	workbook = load_workbook('registros.xlsx')

@@ -35,8 +35,8 @@ opcoes disponíveis:
 3. gerar apenas números impares
 """)
 print(' ')
-choice = input("digite oq vai ser: ")
 
+choice = input("digite oq vai ser: ")
 quanti = int(input("quantos numeros vão ser gerados: "))
 
 opcoes = {

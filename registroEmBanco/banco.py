@@ -9,10 +9,7 @@ consulta = Query()
 
 
 def gerar_dados():
-	"""
-	gera 3 valores: um nome, um cpf e um rg
-	retorna esses 3 valores pra serem usados como valores pra registro no banco
-	"""
+	"""gera 3 valores: um nome, um cpf e um rg, retorna esses 3 valores pra serem usados como valores pra registro no banco"""
 	nome = fake.name()
 	cpf = fake.cpf()
 	rg = fake.random_number(digits=9)
@@ -20,33 +17,29 @@ def gerar_dados():
 
 def verificar_registro(key, value):
 	return database.contains(consulta[key] == value)
-	"""
-	verifica se um cadastro ja foi feito no banco de dados
-	"""
+	"""verifica se um cadastro ja foi feito no banco de dados"""
 
-def saldo(cpf):
-	"""
-	verificar o saldo de um indivíduo, usando seu cpf como parametro de busca
-	"""
+def saldo(nome):
+	"""verificar o saldo de um indivíduo, usando seu cpf como parametro de busca"""
 	saldo = input("deseja verificar seu saldo: ")
 	if saldo == 's':
-		#database.update({'saldo': 9180}, consulta.cpf == cpf)
-		#value = database.search(consulta.cpf == cpf)
+		value = database.search(consulta.cpf == nome)
+		print(value)
 
 def registrarNoBanco(nome, cpf, rg, depositoInicial):
-	"""
-	obtém 4 valores, verifica se esses valores ja estão registrados, se nao estiverem registra no banco de dados
-	
-	"""
+	"""obtém 4 valores, verifica se esses valores ja estão registrados, se nao estiverem registra no banco de dados"""
 	registro = f'conta n:{str(randint(1, 10))}'
+
 	if verificar_registro(registro, nome):
 		print(Fore.RED + "usuario ja registrado " + Fore.RESET)
 	else:
 		database.insert({registro: nome, 'cpf': cpf, 'rg': rg, 'saldo': depositoInicial})
-		print(Fore.GREEN + "usuario registrado com sucesso" + Fore.RESET)
 
-#dados = gerar_dados()
-#registrarNoBanco(dados[0], dados[1], dados[2], 10)
-#result = database.search(consulta.cpf ==)
-#print(result)
-saldo("297.351.486-09")
+		registro = f"nome: {nome}\ncpf: {cpf}\nrg: {rg}\ndeposito inical: {depositoInicial}"
+		print(f"{registro}\n{Fore.GREEN + "usuario registrado com sucesso" + Fore.RESET}")
+
+
+# nome = cpf = rg = gerar_dados()
+# registrarNoBanco(nome[0], cpf[1], rg[2], 100)
+
+saldo("Nathan Nogueira")

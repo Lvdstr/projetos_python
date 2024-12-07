@@ -5,24 +5,38 @@ from tinydb import TinyDB, Query
 from colorama import Fore
 
 
-#declração das variaveis relacionadas a banco de dados
 User = Query() #query para consultas
 db = TinyDB('historico.json') #criação do banco de dados 
 
 
 def iterar_valor_lista(value):
-    """
-    formata as evoluções de um pokemon retornado do json dadosPokemon
+    """formata as evoluções de um pokemon retornado do json dadosPokemon
     para em vez de ser printado assim:
         ["nivel 16: iyvsaur", "nivel 32: venusaur"]
     seja assim:
         nivel 16: ivysaur
-        nivel 32: venusaur
-    """
+        nivel 32: venusaur"""
     if type(value) == list:
         return f"{value[0]}, {value[1]}"
     else:
         return value
+
+
+def limpar_terminal():
+    """
+    função básica pra limpar o terminal independente do sistema
+    operacional
+    """
+    if name == "nt": system("cls")
+    else: system("clear")
+
+
+def item_exists(key, value):
+    """
+    verifica se existe um valor no banco de dados de pokemons
+    sorteados que corresponde aquela chave
+    """
+    return db.contains(User[key] == value)
 
 
 def exibir_dados(pokes):
@@ -70,25 +84,6 @@ def formatar_dados(pokes):
         lista_limpa.append(new)
     for x in lista_limpa:
         exibir_dados(x)
-
-
-def limpar_terminal():
-    """
-    função básica pra limpar o terminal independente do sistema
-    operacional
-    """
-    if name == "nt":
-        system("cls")
-    else:
-        system("clear")
-
-
-def item_exists(key, value):
-    """
-    verifica se existe um valor no banco de dados de pokemons
-    sorteados que corresponde aquela chave
-    """
-    return db.contains(User[key] == value)
 
 
 def abrir_arquivo(gen_choice):

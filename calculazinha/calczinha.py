@@ -9,7 +9,8 @@ def repetir_codigo():
 		sleep(0.7)
 		verificar_sistema()
 
-def numbers(opcao):
+
+def options(opcao):
 	funco = [ calc_basica, calc_porcentagi, calc_desconto, calc_media, calc_medidas ]
 	
 	if opcao in ["1", "2", "3"]:
@@ -17,16 +18,12 @@ def numbers(opcao):
 		value_two = float(input("digite o 2 numero: "))
 	
 	match opcao:
-		case '1': 
-			funco[0](value_one, value_two)
-		case '2': 
-			funco[1](value_one, value_two)
-		case '3': 
-			funco[2](value_one, value_two)
-		case '4': 
-			funco[3]()
-		case '5':
-			funco[4]()
+		case '1': funco[0](value_one, value_two)
+		case '2': funco[1](value_one, value_two)
+		case '3': funco[2](value_one, value_two)
+		case '4': funco[3]()
+		case '5': funco[4]()
+
 
 def iniciar():
 	print("""
@@ -39,7 +36,7 @@ def iniciar():
 
 	calc_choose = input("digite o numero da calculadora que deseja utilizar: ")
 
-	numbers(calc_choose)
+	options(calc_choose)
 	repetir_codigo()
 
 iniciar()

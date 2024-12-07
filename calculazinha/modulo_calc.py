@@ -6,13 +6,14 @@ lista = []
 db = TinyDB('historico.json')
 
 def verificar_sistema():
-	if name == "nt":
-		system("cls")
-	else:
-		system("clear")
+	sleep(0.7)
+	if name == "nt": system("cls")
+	else: system("clear")
+
 
 def registrar_banco(registro):
 	db.insert({"conta_realizada:": registro})
+
 
 def calc_basica(valor1, valor2):
 	operacao = input('''
@@ -28,7 +29,6 @@ escolha a operacao
 	
 	if operacao not in ["+", "-", "/", "*", "%", "//", "**"]:
 		print(f"{operacao} não é um operador matematico, amigao")
-		sleep(0.6)
 		verificar_sistema()
 	else:	
 		operações = {
@@ -44,6 +44,7 @@ escolha a operacao
 		print(f"{valor1} {operacao} {valor2} = {operações.get(operacao)}")
 		result = f"{valor1} {operacao} {valor2}"
 		registrar_banco(result)
+
 
 def calc_porcentagi(valor1, valor2):
 	print("""
@@ -66,6 +67,10 @@ de outro\n
 		result = f"{valor2} equivale a {operacao}% de {valor1}"
 		print(result)
 		registrar_banco(result)
+	else:
+		print(f"a opção {pergunta} não existe")
+		verificar_sistema()
+
 
 def calc_desconto(valor1, valor2):
 	print("Calcule o valor de um produto com desconto")
@@ -73,6 +78,7 @@ def calc_desconto(valor1, valor2):
 	result = f"{valor1} menos {valor2} % = {valor_com_desconto}"
 	registrar_banco(result)
 	print(f"Esse é o valor do produto com desconto: {valor_com_desconto}$ reais")
+
 
 def calc_media():
 	quanti_notas = int(input("digite quanto notas ira calcular: "))
@@ -85,6 +91,7 @@ def calc_media():
 	result = f"a media de {len(lista)} notas = {resultado}"
 	registrar_banco(result)
 	print(f"a media de {len(lista)} notas eh {resultado}")
+
 
 def calc_medidas():
 	number = int(input("digite um valor para ser convertido: "))
