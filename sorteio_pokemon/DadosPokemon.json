@@ -891,14 +891,6 @@
         ],
         "evolução": "nivel 40: omastar"
     },
-    "omastar": {
-        "nome": "omastar",
-        "tipo": [
-            "pedra",
-            "água"
-        ],
-        "evolução": "não possui"
-    },
     "kabuto": {
         "nome": "kabuto",
         "tipo": [
@@ -906,14 +898,6 @@
             "água"
         ],
         "evolução": "nivel 40: kabutops"
-    },
-    "kabutops": {
-        "nome": "kabutops",
-        "tipo": [
-            "pedra",
-            "água"
-        ],
-        "evolução": "não possui"
     },
     "aerodactyl": {
         "nome": "aerodactyl",
@@ -959,19 +943,6 @@
             "nivel 30: dragonair",
             "nivel 55: dragonite"
         ]
-    },
-    "dragonair": {
-        "nome": "dragonair",
-        "tipo": "dragão",
-        "evolução": "nivel 55: dragonite"
-    },
-    "dragonite": {
-        "nome": "dragonite",
-        "tipo": [
-            "dragão",
-            "voador"
-        ],
-        "evolução": "não possui"
     },
     "mewtwo": {
         "nome": "mewtwo",

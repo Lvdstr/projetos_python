@@ -15,6 +15,17 @@ def registrar_banco(registro):
 	db.insert({"conta_realizada:": registro})
 
 
+def carregar(value=0.8):
+    print("carregando", end="\r")
+    sleep(value)  
+    print("carregando.", end="\r")
+    sleep(value + 0.1)
+    print("carregando..", end="\r")
+    sleep(value + 0.1)
+    print("carregando...", end="\r")
+    sleep(value + 0.2)
+
+
 def calc_basica(valor1, valor2):
 	operacao = input('''
 escolha a operacao
@@ -40,7 +51,7 @@ escolha a operacao
 			"//": valor1 // valor2,
 			"%": valor1 % valor2
 		}
-		
+		carregar()
 		print(f"{valor1} {operacao} {valor2} = {operações.get(operacao)}")
 		result = f"{valor1} {operacao} {valor2}"
 		registrar_banco(result)

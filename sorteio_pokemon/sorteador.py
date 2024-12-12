@@ -3,32 +3,11 @@ from json import load
 from os import name, system
 from tinydb import TinyDB, Query
 from colorama import Fore
+from functions import *
 
 
 User = Query() #query para consultas
 db = TinyDB('historico.json') #criação do banco de dados 
-
-
-def iterar_valor_lista(value):
-    """formata as evoluções de um pokemon retornado do json dadosPokemon
-    para em vez de ser printado assim:
-        ["nivel 16: iyvsaur", "nivel 32: venusaur"]
-    seja assim:
-        nivel 16: ivysaur
-        nivel 32: venusaur"""
-    if type(value) == list:
-        return f"{value[0]}, {value[1]}"
-    else:
-        return value
-
-
-def limpar_terminal():
-    """
-    função básica pra limpar o terminal independente do sistema
-    operacional
-    """
-    if name == "nt": system("cls")
-    else: system("clear")
 
 
 def item_exists(key, value):
@@ -61,16 +40,6 @@ def exibir_dados(pokes):
     for x in format:
         print(x)
     print(" ")
-
-
-def limpeza_de_caracteres(texto):
-    """
-    remove o caracter especial de quebra de linha \n que é adicionado
-    em uma lista que foi criada usando o método readlines(), que é um
-    metodo de manipulaçaõ de arquivos
-    """
-    caracteres_para_remover = "\n"
-    return ''.join([char for char in texto if char not in caracteres_para_remover])
 
 
 def formatar_dados(pokes):

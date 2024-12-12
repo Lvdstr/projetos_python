@@ -8,11 +8,19 @@ comandos = {
 }
 
 def exibir_diretório():
+	"""exibir todos os arquivos do diretório onde esta esse código"""
 	if name == "nt": system("dir")
 	else: system("ls")
 
 
+
 def criar_arquivo(nome):
+	"""
+	recebe um nome formado por nomeDoArquivo + .extensãoDoArquivo,
+	cria um arquivo com o formato write,
+	atrasa o código em 2 segundos,
+	exibe no console uma mensagem formatada em verde que o arquivo vai criar
+	"""
 	with open(nome, "w") as arquivo:
 		sleep(2)
 		print(f"{Fore.GREEN + nome + Fore.RESET} criado com sucesso")
@@ -68,4 +76,4 @@ def ler_arquivos(arquivos):
 		system("cat " + x)
 
 
-criar_multiplos_arquivos("a", ".py", 5)
+criar_multiplos_arquivos("destiny", ".py", 5)
