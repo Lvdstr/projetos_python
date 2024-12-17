@@ -953,5 +953,424 @@
         "nome": "mew",
         "tipo": "psíquico",
         "evolução": "não possui"
-    }    
+    },
+        "chikorita": {
+            "nome": "chikorita",
+            "tipo": "planta",
+            "evolução": [
+                "nivel 16: bayleef",
+                "nivel 32: meganium"
+            ]
+        },
+        "cyndaquil": {
+            "nome": "cyndaquil",
+            "tipo": "fogo",
+            "evolução": [
+                "nivel 14: quilava",
+                "nivel 36: typhlosion"
+            ]
+        },
+        "totodile": {
+            "nome": "totodile",
+            "tipo": "água",
+            "evolução": [
+                "nivel 18: croconaw",
+                "nivel 30: feraligatr"
+            ]
+        },
+        "sentret": {
+            "nome": "sentret",
+            "tipo": "normal",
+            "evolução": "nivel 15: furret"
+        },
+        "hoothoot": {
+            "nome": "hoothoot",
+            "tipo": [
+                "normal",
+                "voador"
+            ],
+            "evolução": "nivel 20: noctowl"
+        },
+        "ledyba": {
+            "nome": "ledyba",
+            "tipo": [
+                "inseto",
+                "voador"
+            ],
+            "evolução": "nivel 18: ledian"
+        },
+        "spinarak": {
+            "nome": "spinarak",
+            "tipo": [
+                "inseto",
+                "venenoso"
+            ],
+            "evolução": "nivel 22: ariados"
+        },
+        "chinchou": {
+            "nome": "chinchou",
+            "tipo": [
+                "água",
+                "elétrico"
+            ],
+            "evolução": "nivel 27: lanturn"
+        },
+        "pichu": {
+            "nome": "pichu",
+            "tipo": "elétrico",
+            "evolução": "amizade: pikachu"
+        },
+        "cleffa": {
+            "nome": "cleffa",
+            "tipo": "fada",
+            "evolução": "amizade: clefairy"
+        },
+        "igglybuff": {
+            "nome": "igglybuff",
+            "tipo": "fada",
+            "evolução": "amizade: jigglypuff"
+        },
+        "togepi": {
+            "nome": "togepi",
+            "tipo": "fada",
+            "evolução": "amizade: togetic"
+        },
+        "togetic": {
+            "nome": "togetic",
+            "tipo": [
+                "fada",
+                "voador"
+            ],
+            "evolução": "usar Shiny Stone: togekiss"
+        },
+        "natu": {
+            "nome": "natu",
+            "tipo": [
+                "psíquico",
+                "voador"
+            ],
+            "evolução": "nivel 25: xatu"
+        },
+        "mareep": {
+            "nome": "mareep",
+            "tipo": "elétrico",
+            "evolução": [
+                "nivel 15: flaaffy",
+                "nivel 30: ampharos"
+            ]
+        },
+        "azurill": {
+            "nome": "azurill",
+            "tipo": "fada",
+            "evolução": "amizade: marill"
+        },
+        "marill": {
+            "nome": "marill",
+            "tipo": [
+                "água",
+                "fada"
+            ],
+            "evolução": "nivel 18: azumarill"
+        },
+        "sudowoodo": {
+            "nome": "sudowoodo",
+            "tipo": "pedra",
+            "evolução": null
+        },
+        "politoed": {
+            "nome": "politoed",
+            "tipo": "água",
+            "evolução": null
+        },
+        "hoppip": {
+            "nome": "hoppip",
+            "tipo": [
+                "planta",
+                "voador"
+            ],
+            "evolução": [
+                "nivel 18: skiploom",
+                "nivel 27: jumpluff"
+            ]
+        },
+        "aipom": {
+            "nome": "aipom",
+            "tipo": "normal",
+            "evolução": "saber Double Hit: ambipom"
+        },
+        "sunkern": {
+            "nome": "sunkern",
+            "tipo": "planta",
+            "evolução": "usar Sun Stone: sunflora"
+        },
+        "yanma": {
+            "nome": "yanma",
+            "tipo": [
+                "inseto",
+                "voador"
+            ],
+            "evolução": "saber Ancient Power: yanmega"
+        },
+        "wooper": {
+            "nome": "wooper",
+            "tipo": [
+                "água",
+                "terrestre"
+            ],
+            "evolução": "nivel 20: quagsire"
+        },
+        "murkrow": {
+            "nome": "murkrow",
+            "tipo": [
+                "noturno",
+                "voador"
+            ],
+            "evolução": "usar Dusk Stone: honchkrow"
+        },
+        "misdreavus": {
+            "nome": "misdreavus",
+            "tipo": "fantasma",
+            "evolução": "usar Dusk Stone: mismagius"
+        },
+        "unown": {
+            "nome": "unown",
+            "tipo": "psíquico",
+            "evolução": null
+        },
+        "wobbuffet": {
+            "nome": "wobbuffet",
+            "tipo": "psíquico",
+            "evolução": null
+        },
+        "girafarig": {
+            "nome": "girafarig",
+            "tipo": [
+                "normal",
+                "psíquico"
+            ],
+            "evolução": "nivel 32: farigiraf"
+        },
+        "pineco": {
+            "nome": "pineco",
+            "tipo": "inseto",
+            "evolução": "nivel 31: forretress"
+        },
+        "dunsparce": {
+            "nome": "dunsparce",
+            "tipo": "normal",
+            "evolução": "saber Hyper Drill: dudunsparce"
+        },
+        "gligar": {
+            "nome": "gligar",
+            "tipo": [
+                "terrestre",
+                "voador"
+            ],
+            "evolução": "usar Razor Fang (à noite): gliscor"
+        },
+        "snubbull": {
+            "nome": "snubbull",
+            "tipo": "fada",
+            "evolução": "nivel 23: granbull"
+        },
+        "qwilfish": {
+            "nome": "qwilfish",
+            "tipo": [
+                "água",
+                "venenoso"
+            ],
+            "evolução": "saber Barb Barrage: overqwil"
+        },
+        "shuckle": {
+            "nome": "shuckle",
+            "tipo": [
+                "inseto",
+                "pedra"
+            ],
+            "evolução": null
+        },
+        "heracross": {
+            "nome": "heracross",
+            "tipo": [
+                "inseto",
+                "lutador"
+            ],
+            "evolução": null
+        },
+        "sneasel": {
+            "nome": "sneasel",
+            "tipo": [
+                "noturno",
+                "gelo"
+            ],
+            "evolução": "usar Razor Claw (à noite): weavile"
+        },
+        "teddiursa": {
+            "nome": "teddiursa",
+            "tipo": "normal",
+            "evolução": "nivel 30: ursaring"
+        },
+        "slugma": {
+            "nome": "slugma",
+            "tipo": "fogo",
+            "evolução": "nivel 38: magcargo"
+        },
+        "swinub": {
+            "nome": "swinub",
+            "tipo": [
+                "gelo",
+                "terrestre"
+            ],
+            "evolução": [
+                "nivel 33: piloswine",
+                "saber Ancient Power: mamoswine"
+            ]
+        },
+        "corsola": {
+            "nome": "corsola",
+            "tipo": [
+                "água",
+                "pedra"
+            ],
+            "evolução": null
+        },
+        "remoraid": {
+            "nome": "remoraid",
+            "tipo": "água",
+            "evolução": "nivel 25: octillery"
+        },
+        "delibird": {
+            "nome": "delibird",
+            "tipo": [
+                "gelo",
+                "voador"
+            ],
+            "evolução": null
+        },
+        "mantine": {
+            "nome": "mantine",
+            "tipo": [
+                "água",
+                "voador"
+            ],
+            "evolução": null
+        },
+        "skarmory": {
+            "nome": "skarmory",
+            "tipo": [
+                "aço",
+                "voador"
+            ],
+            "evolução": null
+        },
+        "houndour": {
+            "nome": "houndour",
+            "tipo": [
+                "fogo",
+                "noturno"
+            ],
+            "evolução": "nivel 24: houndoom"
+        },
+        "phanpy": {
+            "nome": "phanpy",
+            "tipo": "terrestre",
+            "evolução": "nivel 25: donphan"
+        },
+        "stantler": {
+            "nome": "stantler",
+            "tipo": "normal",
+            "evolução": "saber Psyshield Bash: wyrdeer"
+        },
+        "smeargle": {
+            "nome": "smeargle",
+            "tipo": "normal",
+            "evolução": null
+        },
+        "tyrogue": {
+            "nome": "tyrogue",
+            "tipo": "lutador",
+            "evolução": [
+                "ataque maior: hitmonlee",
+                "defesa maior: hitmonchan",
+                "status igual: hitmontop"
+            ]
+        },
+        "smoochum": {
+            "nome": "smoochum",
+            "tipo": [
+                "gelo",
+                "psíquico"
+            ],
+            "evolução": "nivel 30: jynx"
+        },
+        "elekid": {
+            "nome": "elekid",
+            "tipo": "elétrico",
+            "evolução": "nivel 30: electabuzz"
+        },
+        "magby": {
+            "nome": "magby",
+            "tipo": "fogo",
+            "evolução": "nivel 30: magmar"
+        },
+        "miltank": {
+            "nome": "miltank",
+            "tipo": "normal",
+            "evolução": null
+        },
+        "blissey": {
+            "nome": "blissey",
+            "tipo": "normal",
+            "evolução": null
+        },
+        "raikou": {
+            "nome": "raikou",
+            "tipo": "elétrico",
+            "evolução": null
+        },
+        "entei": {
+            "nome": "entei",
+            "tipo": "fogo",
+            "evolução": null
+        },
+        "suicune": {
+            "nome": "suicune",
+            "tipo": "água",
+            "evolução": null
+        },
+        "larvitar": {
+            "nome": "larvitar",
+            "tipo": [
+                "pedra",
+                "terrestre"
+            ],
+            "evolução": [
+                "nivel 30: pupitar",
+                "nivel 55: tyranitar"
+            ]
+        },
+        "lugia": {
+            "nome": "lugia",
+            "tipo": [
+                "psíquico",
+                "voador"
+            ],
+            "evolução": null
+        },
+        "ho-oh": {
+            "nome": "ho-oh",
+            "tipo": [
+                "fogo",
+                "voador"
+            ],
+            "evolução": null
+        },
+        "celebi": {
+            "nome": "celebi",
+            "tipo": [
+                "psíquico",
+                "planta"
+            ],
+            "evolução": null
+        }
 }
