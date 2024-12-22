@@ -1,4 +1,5 @@
 from modulo_calc import *
+from colorama import Fore
 
 def repetir_codigo():
 	repetir = input("deseja repetir o código: ")
@@ -23,6 +24,10 @@ def options(opcao):
 		case '3': funco[2](value_one, value_two)
 		case '4': funco[3]()
 		case '5': funco[4]()
+		case _: print(f"a opção {opcao} não é valida")
+	
+	sleep(1.4)
+	verificar_sistema()
 
 
 def iniciar():
