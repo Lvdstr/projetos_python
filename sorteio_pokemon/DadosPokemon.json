@@ -1898,5 +1898,514 @@
         "nome": "deoxys",
         "tipo": "psíquico",
         "evolução": null
+    },
+    "turtwig": {
+        "nome": "turtwig",
+        "tipo": "planta",
+        "evolução": [
+            "nivel 18: grotle",
+            "nivel 32: torterra"
+        ]
+    },
+    "chimchar": {
+        "nome": "chimchar",
+        "tipo": "fogo",
+        "evolução": [
+            "nivel 14: monferno",
+            "nivel 36: infernape"
+        ]
+    },
+    "piplup": {
+        "nome": "piplup",
+        "tipo": "água",
+        "evolução": [
+            "nivel 16: prinplup",
+            "nivel 36: empoleon"
+        ]
+    },
+    "starly": {
+        "nome": "starly",
+        "tipo": [
+            "normal",
+            "voador"
+        ],
+        "evolução": [
+            "nivel 14: staravia",
+            "nivel 34: staraptor"
+        ]
+    },
+    "bidoof": {
+        "nome": "bidoof",
+        "tipo": "normal",
+        "evolução": "nivel 15: bibarel"
+    },
+    "kricketot": {
+        "nome": "kricketot",
+        "tipo": "inseto",
+        "evolução": "nivel 10: kricketune"
+    },
+    "shinx": {
+        "nome": "shinx",
+        "tipo": "elétrico",
+        "evolução": [
+            "nivel 15: luxio",
+            "nivel 30: luxray"
+        ]
+    },
+    "budew": {
+        "nome": "budew",
+        "tipo": [
+            "planta",
+            "venenoso"
+        ],
+        "evolução": "amizade (dia): roselia"
+    },
+    "roserade": {
+        "nome": "roserade",
+        "tipo": [
+            "planta",
+            "venenoso"
+        ],
+        "evolução": null
+    },
+    "cranidos": {
+        "nome": "cranidos",
+        "tipo": "pedra",
+        "evolução": "nivel 30: rampardos"
+    },
+    "shieldon": {
+        "nome": "shieldon",
+        "tipo": [
+            "pedra",
+            "aço"
+        ],
+        "evolução": "nivel 30: bastiodon"
+    },
+    "burmy": {
+        "nome": "burmy",
+        "tipo": "inseto",
+        "evolução": [
+            "nivel 20 (fêmea): wormadam",
+            "nivel 20 (macho): mothim"
+        ]
+    },
+    "wormadam": {
+        "nome": "wormadam",
+        "tipo": [
+            "inseto",
+            "planta"
+        ],
+        "evolução": null
+    },
+    "mothim": {
+        "nome": "mothim",
+        "tipo": [
+            "inseto",
+            "voador"
+        ],
+        "evolução": null
+    },
+    "combee": {
+        "nome": "combee",
+        "tipo": [
+            "inseto",
+            "voador"
+        ],
+        "evolução": "nivel 21 (fêmea): vespiquen"
+    },
+    "vespiquen": {
+        "nome": "vespiquen",
+        "tipo": [
+            "inseto",
+            "voador"
+        ],
+        "evolução": null
+    },
+    "pachirisu": {
+        "nome": "pachirisu",
+        "tipo": "elétrico",
+        "evolução": null
+    },
+    "buizel": {
+        "nome": "buizel",
+        "tipo": "água",
+        "evolução": "nivel 26: floatzel"
+    },
+    "cherubi": {
+        "nome": "cherubi",
+        "tipo": "planta",
+        "evolução": "nivel 25: cherrim"
+    },
+    "shellos": {
+        "nome": "shellos",
+        "tipo": "água",
+        "evolução": "nivel 30: gastrodon"
+    },
+    "gastrodon": {
+        "nome": "gastrodon",
+        "tipo": [
+            "água",
+            "terrestre"
+        ],
+        "evolução": null
+    },
+    "drifloon": {
+        "nome": "drifloon",
+        "tipo": [
+            "fantasma",
+            "voador"
+        ],
+        "evolução": "nivel 28: drifblim"
+    },
+    "buneary": {
+        "nome": "buneary",
+        "tipo": "normal",
+        "evolução": "amizade: lopunny"
+    },
+    "lopunny": {
+        "nome": "lopunny",
+        "tipo": "normal",
+        "evolução": null
+    },
+    "glameow": {
+        "nome": "glameow",
+        "tipo": "normal",
+        "evolução": "nivel 38: purugly"
+    },
+    "stunky": {
+        "nome": "stunky",
+        "tipo": [
+            "venenoso",
+            "noturno"
+        ],
+        "evolução": "nivel 34: skuntank"
+    },
+    "bronzor": {
+        "nome": "bronzor",
+        "tipo": [
+            "aço",
+            "psíquico"
+        ],
+        "evolução": "nivel 33: bronzong"
+    },
+    "bonsly": {
+        "nome": "bonsly",
+        "tipo": "pedra",
+        "evolução": "aprender Mimic: sudowoodo"
+    },
+    "mime_jr": {
+        "nome": "mime_jr",
+        "tipo": [
+            "psíquico",
+            "fada"
+        ],
+        "evolução": "aprender Mimic: mr_mime"
+    },
+    "happiny": {
+        "nome": "happiny",
+        "tipo": "normal",
+        "evolução": "segurar Oval Stone (dia): chansey"
+    },
+    "chatot": {
+        "nome": "chatot",
+        "tipo": [
+            "normal",
+            "voador"
+        ],
+        "evolução": null
+    },
+    "spiritomb": {
+        "nome": "spiritomb",
+        "tipo": [
+            "fantasma",
+            "noturno"
+        ],
+        "evolução": null
+    },
+    "gible": {
+        "nome": "gible",
+        "tipo": [
+            "dragão",
+            "terrestre"
+        ],
+        "evolução": [
+            "nivel 24: gabite",
+            "nivel 48: garchomp"
+        ]
+    },
+    "munchlax": {
+        "nome": "munchlax",
+        "tipo": "normal",
+        "evolução": "amizade: snorlax"
+    },
+    "riolu": {
+        "nome": "riolu",
+        "tipo": "lutador",
+        "evolução": "amizade (dia): lucario"
+    },
+    "lucario": {
+        "nome": "lucario",
+        "tipo": [
+            "lutador",
+            "aço"
+        ],
+        "evolução": null
+    },
+    "hippopotas": {
+        "nome": "hippopotas",
+        "tipo": "terrestre",
+        "evolução": "nivel 34: hippowdon"
+    },
+    "skorupi": {
+        "nome": "skorupi",
+        "tipo": [
+            "venenoso",
+            "inseto"
+        ],
+        "evolução": "nivel 40: drapion"
+    },
+    "croagunk": {
+        "nome": "croagunk",
+        "tipo": [
+            "lutador",
+            "venenoso"
+        ],
+        "evolução": "nivel 37: toxicroak"
+    },
+    "carnivine": {
+        "nome": "carnivine",
+        "tipo": "planta",
+        "evolução": null
+    },
+    "finneon": {
+        "nome": "finneon",
+        "tipo": "água",
+        "evolução": "nivel 31: lumineon"
+    },
+    "mantyke": {
+        "nome": "mantyke",
+        "tipo": [
+            "água",
+            "voador"
+        ],
+        "evolução": "com Remoraid: mantine"
+    },
+    "snover": {
+        "nome": "snover",
+        "tipo": [
+            "gelo",
+            "planta"
+        ],
+        "evolução": "nivel 40: abomasnow"
+    },
+    "weavile": {
+        "nome": "weavile",
+        "tipo": [
+            "noturno",
+            "gelo"
+        ],
+        "evolução": null
+    },
+    "magnezone": {
+        "nome": "magnezone",
+        "tipo": [
+            "elétrico",
+            "aço"
+        ],
+        "evolução": null
+    },
+    "lickilicky": {
+        "nome": "lickilicky",
+        "tipo": "normal",
+        "evolução": null
+    },
+    "rhyperior": {
+        "nome": "rhyperior",
+        "tipo": [
+            "pedra",
+            "terrestre"
+        ],
+        "evolução": null
+    },
+    "tangrowth": {
+        "nome": "tangrowth",
+        "tipo": "planta",
+        "evolução": null
+    },
+    "electivire": {
+        "nome": "electivire",
+        "tipo": "elétrico",
+        "evolução": null
+    },
+    "magmortar": {
+        "nome": "magmortar",
+        "tipo": "fogo",
+        "evolução": null
+    },
+    "togekiss": {
+        "nome": "togekiss",
+        "tipo": [
+            "fada",
+            "voador"
+        ],
+        "evolução": null
+    },
+    "yanmega": {
+        "nome": "yanmega",
+        "tipo": [
+            "inseto",
+            "voador"
+        ],
+        "evolução": null
+    },
+    "leafeon": {
+        "nome": "leafeon",
+        "tipo": "planta",
+        "evolução": null
+    },
+    "glaceon": {
+        "nome": "glaceon",
+        "tipo": "gelo",
+        "evolução": null
+    },
+    "gliscor": {
+        "nome": "gliscor",
+        "tipo": [
+            "terrestre",
+            "voador"
+        ],
+        "evolução": null
+    },
+    "mamoswine": {
+        "nome": "mamoswine",
+        "tipo": [
+            "gelo",
+            "terrestre"
+        ],
+        "evolução": null
+    },
+    "porygon_z": {
+        "nome": "porygon_z",
+        "tipo": "normal",
+        "evolução": null
+    },
+    "gallade": {
+        "nome": "gallade",
+        "tipo": [
+            "psíquico",
+            "lutador"
+        ],
+        "evolução": null
+    },
+    "probopass": {
+        "nome": "probopass",
+        "tipo": [
+            "pedra",
+            "aço"
+        ],
+        "evolução": null
+    },
+    "dusknoir": {
+        "nome": "dusknoir",
+        "tipo": "fantasma",
+        "evolução": null
+    },
+    "froslass": {
+        "nome": "froslass",
+        "tipo": [
+            "gelo",
+            "fantasma"
+        ],
+        "evolução": null
+    },
+    "rotom": {
+        "nome": "rotom",
+        "tipo": [
+            "elétrico",
+            "fantasma"
+        ],
+        "evolução": null
+    },
+    "uxie": {
+        "nome": "uxie",
+        "tipo": "psíquico",
+        "evolução": null
+    },
+    "mesprit": {
+        "nome": "mesprit",
+        "tipo": "psíquico",
+        "evolução": null
+    },
+    "azelf": {
+        "nome": "azelf",
+        "tipo": "psíquico",
+        "evolução": null
+    },
+    "dialga": {
+        "nome": "dialga",
+        "tipo": [
+            "aço",
+            "dragão"
+        ],
+        "evolução": null
+    },
+    "palkia": {
+        "nome": "palkia",
+        "tipo": [
+            "água",
+            "dragão"
+        ],
+        "evolução": null
+    },
+    "heatran": {
+        "nome": "heatran",
+        "tipo": [
+            "fogo",
+            "aço"
+        ],
+        "evolução": null
+    },
+    "regigigas": {
+        "nome": "regigigas",
+        "tipo": "normal",
+        "evolução": null
+    },
+    "giratina": {
+        "nome": "giratina",
+        "tipo": [
+            "fantasma",
+            "dragão"
+        ],
+        "evolução": null
+    },
+    "cresselia": {
+        "nome": "cresselia",
+        "tipo": "psíquico",
+        "evolução": null
+    },
+    "phione": {
+        "nome": "phione",
+        "tipo": "água",
+        "evolução": null
+    },
+    "manaphy": {
+        "nome": "manaphy",
+        "tipo": "água",
+        "evolução": null
+    },
+    "darkrai": {
+        "nome": "darkrai",
+        "tipo": "noturno",
+        "evolução": null
+    },
+    "shaymin": {
+        "nome": "shaymin",
+        "tipo": "planta",
+        "evolução": null
+    },
+    "arceus": {
+        "nome": "arceus",
+        "tipo": "normal",
+        "evolução": null
     }
-}        
+}
