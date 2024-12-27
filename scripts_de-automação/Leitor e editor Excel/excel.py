@@ -15,7 +15,10 @@ try:
 
         def verficaçõesNosValores(value):
                 if value[0] > value[1]:
-                        print(f"erro o primeiro valor é maior que o segundo\n{value[0]}\n{value[1]}\nnão haverá mudanças na planilha")
+                        print(f"erro, o valor antigo é maior que o novo\n{value[0]}\n{value[1]}\nnão haverá mudanças na planilha")
+                        return False
+                elif value[0] == value[1]:
+                        print(f"erro, é o memo valor, o mongão")
                         return False
                 else:
                         return True
@@ -23,7 +26,8 @@ try:
 
         def alterar_valor(planilha):
                 sheet = workbook[planilha]
-                celula = input("digite nome da célula que quer modificar: ")
+                linha = input("digite número da célula que quer modificar: ")
+                celula = "c" + linha
                 if celula != "":
                         old_value = sheet[celula].value
                         value = input(f"digite o novo valor da celula {celula}: ").upper()
@@ -33,18 +37,18 @@ try:
                                 case True:
                                         sasa = sheet[celula] = new_value
                                         workbook.save('registros.xlsx')
-                                        valores([old_value, new_value, planilha])
+                                        valores(old_value, new_value, sheet, linha)
                                 case _:
                                         return
                 else:
                         limpar_terminal()
 
 
-        def valores(values):
-                print(f"valor antigo: {values[0]}\nnovo valor: {values[1]}")
+        def valores(valorAntigo, valorNovo, Planilha, linha):
+                print(f"valor antigo:\n{Planilha['a' + linha].value}: {valorAntigo}\nnovo valor:\n{Planilha['a' + linha].value}: {valorNovo}")
                 repeat = input("deseja repetir a planilha: ")
                 if repeat == "s":
-                        alterar_valor(values[2])
+                        alterar_valor("MANGAS")
                 else:
                         limpar_terminal()
 
