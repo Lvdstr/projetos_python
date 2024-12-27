@@ -1,38 +1,30 @@
 from os import system, name
 from colorama import Fore
 from openpyxl import load_workbook
-#from functions import verifiy_system
+from functions import verifiy_system
 
 try:
-        workbook = load_workbook('registros.xlsx')
+        workbook = load_workbook('/data/data/com.termux/files/home/scripts/exceu/registros.xlsx')
 except:
         print("o arquivo foi removido patrão")
 
-mensagem = f"""
-qual planilha quer abrir:
-1- {Fore.GREEN + "filmes" + Fore.RESET}
-2- {Fore.GREEN + "mangas"+ Fore.RESET}
-3- {Fore.GREEN + "digital tamers"+ Fore.RESET}
-4- {Fore.GREEN + "jogos"+ Fore.RESET}
-"""
 
 def alterar_valor(planilha):
-        sheet = workbook[planilha]
-        celula = input("digite nome da célula que quer modificar: ")
-        if celula == "":
-                #verifiy_system()
-                print("se foda")
-        else:
-                old_value = sheet[celula].value
-                new_value = input(f"digite o novo valor da celula {celula}: ").upper()
-                match new_value.isdigit():
-                        case True:
-                                new_value = int(new_value)
-                        case _:
-                                pass
-                sasa = sheet[celula] = new_value
-                workbook.save('registros.xlsx')
-                print(f"valor antigo: {old_value}\nnovo valor: {new_value}")
+	sheet = workbook[planilha]
+	celula = input("digite nome da célula que quer modificar: ")
+	if celula == "":
+		system('clear')
+	else:
+		old_value = sheet[celula].value
+		new_value = input(f"digite o novo valor da celula {celula}: ").upper()
+		match new_value.isdigit():
+			case True:
+				new_value = int(new_value)
+			case _:
+				pass
+		sasa = sheet[celula] = new_value
+		workbook.save('/data/data/com.termux/files/home/scripts/exceu/registros.xlsx')
+		print(f"valor antigo: {old_value}\nnovo valor: {new_value}")
 
 
 def exibir_planilha(planilha, row, column):
@@ -55,7 +47,7 @@ def exibir_planilha(planilha, row, column):
 
         elif planilha == "MANGAS":
                 sheet = workbook[planilha]
-                cell = Fore.GREEN + "   A:nomes       C:capitulos lidos" + Fore.RESET
+                cell = Fore.GREEN + "  A:nomes       C:capitulos lidos" + Fore.RESET
                 print(cell)
                 while row < 100:
                         #gambiarra feita aqui, arrume dps, feita pra rodar todas as planilhas
@@ -86,7 +78,13 @@ def exibir_planilha(planilha, row, column):
 
 
 def chamar_planilha():
-                choice = input(mensagem)
+                choice = input(f"""
+qual planilha quer abrir:
+1- {Fore.GREEN + "filmes" + Fore.RESET}
+2- {Fore.GREEN + "mangas"+ Fore.RESET}
+3- {Fore.GREEN + "digital tamers"+ Fore.RESET}
+4- {Fore.GREEN + "jogos"+ Fore.RESET}
+""" + "\n")
 
                 match choice:
                         case "1":
@@ -102,9 +100,8 @@ def chamar_planilha():
                                 exibir_planilha('JOGOS', 4, 'c')
 
                         case _:
-                                pass
-                                #verifiy_system()
+                                verifiy_system()
 
 
 chamar_planilha()
-#system("python3 /data/data/com.termux/files/home/scripts/python/corrigir_caps.py")
+system("python3 /data/data/com.termux/files/home/scripts/python/corrigir_caps.py")
