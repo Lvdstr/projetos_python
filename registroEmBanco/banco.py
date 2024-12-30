@@ -1,4 +1,4 @@
-from random import randint, randrange, choice, shuffle, sample
+from random import randint
 from tinydb import TinyDB, Query
 from colorama import Fore, Back, Style
 from faker import Faker
@@ -15,9 +15,11 @@ def gerar_dados():
 	rg = fake.random_number(digits=9)
 	return [nome, cpf, rg]
 
+
 def verificar_registro(key, value):
 	return database.contains(consulta[key] == value)
 	"""verifica se um cadastro ja foi feito no banco de dados"""
+
 
 def saldo(nome):
 	"""verificar o saldo de um indivíduo, usando seu cpf como parametro de busca"""
@@ -26,20 +28,19 @@ def saldo(nome):
 		value = database.search(consulta.cpf == nome)
 		print(value)
 
+
 def registrarNoBanco(nome, cpf, rg, depositoInicial):
 	"""obtém 4 valores, verifica se esses valores ja estão registrados, se nao estiverem registra no banco de dados"""
 	registro = f'conta n:{str(randint(1, 10))}'
+	informações_usuario = f"nome: {nome}\ncpf: {cpf}\nrg: {rg}\ndeposito inical: {depositoInicial}"
 
-	if verificar_registro(registro, nome):
+	if verificar_registro(registro, cpf):
 		print(Fore.RED + "usuario ja registrado " + Fore.RESET)
 	else:
 		database.insert({registro: nome, 'cpf': cpf, 'rg': rg, 'saldo': depositoInicial})
+		print(f"{informações_usuario}\n{Fore.GREEN + "usuario registrado com sucesso" + Fore.RESET}")
 
-		registro = f"nome: {nome}\ncpf: {cpf}\nrg: {rg}\ndeposito inical: {depositoInicial}"
-		print(f"{registro}\n{Fore.GREEN + "usuario registrado com sucesso" + Fore.RESET}")
-
-
-# nome = cpf = rg = gerar_dados()
-# registrarNoBanco(nome[0], cpf[1], rg[2], 100)
-
-saldo("Nathan Nogueira")
+sasa = input("""oq quer fazer:
+1. registrar usuário no banco
+2. verificar conta
+""")

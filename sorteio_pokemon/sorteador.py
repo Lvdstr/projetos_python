@@ -7,7 +7,20 @@ from functions import *
 
 
 User = Query() #query para consultas
-db = TinyDB('historico.json') #criação do banco de dados 
+db = TinyDB('sorteio_pokemon/historico.json') #criação do banco de dados
+mensagem = """
+escolha:
+1- primeira geração
+2- segunda geração
+3- terceira geração
+4- quarta geração
+5- quinta geração
+6- sexta geração
+7- sétima geração
+8- oitava geração
+9- nona geração
+all- todas                  
+"""
 
 
 def item_exists(key, value):
@@ -24,7 +37,7 @@ def exibir_dados(pokes):
     pega os valores de cada chave e joga em uma lista pra
     formatar sua exibição no terminal
     """
-    with open('DadosPokemon.json', 'r', encoding='utf-8') as arquivo:
+    with open('sorteio_pokemon/DadosPokemon.json', 'r', encoding='utf-8') as arquivo:
         dados = load(arquivo)
 
     pokemon = dados[pokes]
@@ -73,7 +86,7 @@ def abrir_arquivo(gen_choice):
         "9": [906, 932]
     }
     lista_filtrada = []
-    with open("pokemons.txt", "r") as abrir_arquivo:
+    with open("sorteio_pokemon/pokemons.txt", "r") as abrir_arquivo:
         lista_pokemons = abrir_arquivo.readlines()
         if gen_choice == "all":
             return lista_pokemons
@@ -97,7 +110,8 @@ def registrarNoBanco(values):
     """
     pokemons = []
     for x in values:
-        pokemons.append(x)
+        limpar_string = limpeza_de_caracteres(x)
+        pokemons.append(limpar_string)
         if item_exists("pokemon_sorteado", x):
             print(Fore.RED + x + Fore.RESET)
         else:
@@ -107,23 +121,8 @@ def registrarNoBanco(values):
 
 	
 def sortear_pokemons(quanti_pokes):
-    """
-    função inicial para começar o programa
-    """
     itens_sorteados = []
-    gen_choice = input("""
-escolha:
-1- primeira geração
-2- segunda geração
-3- terceira geração
-4- quarta geração
-5- quinta geração
-6- sexta geração
-7- sétima geração
-8- oitava geração
-9- nona geração
-all- todas                  
-""")
+    gen_choice = input(mensagem)
     if gen_choice in ["1","2","3","4","5","6","7","8","9","all"]:
         limpar_terminal()
         arquivo_nomes = abrir_arquivo(gen_choice)

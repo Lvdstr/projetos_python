@@ -1,13 +1,12 @@
-from colorama import Fore, Style
-from tinydb import TinyDB, Query
 from os import system, name
 from time import sleep
+from colorama import Fore, Style
+from tinydb import TinyDB, Query
+from functions import *
 
 database = TinyDB('respostas.json')
 
-# def verificar_jogador(key, value):
-#	return database.contains(consulta[key] == value)
-#funcao para verificar registros no banco
+opcoes = ["s", "S", "SIM", "sim"]
 
 resposta_certas = [
 	'sim',
@@ -85,9 +84,10 @@ def exibirRespostasCorretas():
 	registrar_pontos(pontos)
 
 def iniciar_quizz():
+	limpar_terminal()
 	print("bem vindo ao joguin de quizz")
 	pergunta = input('deseja jogar o quizz: ').lower()
-	if pergunta == 's':
+	if pergunta in opcoes:
 		exibir_perguntas()
 	else:
 		print('chau')
@@ -95,4 +95,3 @@ def iniciar_quizz():
 		verificar_sistema()
 
 iniciar_quizz()
-#exibirRespostasCorretas()
