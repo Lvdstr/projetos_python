@@ -1,0 +1,34 @@
+[ 
+    {
+        "name": "lvdstr",
+        "age": 30,
+        "height": 1.90,
+        "weight": 88.60,
+        "city": "New York",
+        "languages": [
+            "python",
+            "javascript",
+            "php",
+            "c",
+            "java",
+            "c++",
+            "c#",
+            "kotlin"
+        ],
+        "library": [
+            "random",
+            "time",
+            "json",
+            "os",
+            "colorama",
+            "tinydb",
+            "pathlib",
+            "datetime",
+            "abs"
+        ]
+    },
+    {
+        "gosta de": "paçoca",
+        "meeeeu": "presidente"
+    }
+]
