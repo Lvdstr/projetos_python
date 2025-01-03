@@ -1,5 +1,5 @@
-[ 
-    {
+{
+    "sese": {
         "name": "lvdstr",
         "age": 30,
         "height": 1.90,
@@ -27,8 +27,8 @@
             "abs"
         ]
     },
-    {
+    "sasa": {
         "gosta de": "paçoca",
         "meeeeu": "presidente"
     }
-]
+}

@@ -1,4 +1,4 @@
-__main__ = "moduloLocal_json"
+__name__ = "moduloLocal_json"
 
 from json import load
 from os import system, name
@@ -16,7 +16,11 @@ e depois retorna a extensão
     """
     file_path = Path(name)
     extension = file_path.suffix
-    return extension
+    if extension == ".json":
+        return extension
+    else:
+        print(error_mensage)
+        return
 
 
 def list_convert(value):
@@ -33,65 +37,80 @@ def limpar_terminal():
         case _: system("clear")
 
 
-def exibir_json(caminho):
-    limpar_terminal()
-    verificar = IdentificarExtensao(caminho)
-    if verificar == ".json":
-        with open(caminho, "r") as arquivo:
-            json = load(arquivo)
+def abrir_arquivo(caminho):
+    with open(caminho, "r") as arquivo:
+        json = load(arquivo)
+    return json
 
-        for x in json:
-            chave = x.capitalize()
-            valor = list_convert(json[x])
-            dados = f"{Fore.YELLOW + chave + Fore.RESET}: {valor}"
-            print(dados)
-    else:
-        print(error_mensage)
+
+def exibir_json(caminho):
+    """
+exibe o conteudo de um arquivo json que contem apenas um objeto
+    """
+    limpar_terminal()
+    IdentificarExtensao(caminho)
+    json = abrir_arquivo(caminho)
+
+    for x in json:
+        chave = x.capitalize()
+        valor = list_convert(json[x])
+        dados = f"{Fore.YELLOW + chave + Fore.RESET}: {valor}"
+        print(dados)
 
 
 def exibir_json_lista(caminho, item):
+    """
+exibe o conteudo de um arquivo json que segue o estilo lista de objetos
+    """
     limpar_terminal()
-    verificar = IdentificarExtensao(caminho)
-    if verificar == ".json":
-        with open(caminho, "r") as arquivo:
-            json = load(arquivo)[item]
+    IdentificarExtensao(caminho)
+    json = abrir_arquivo(caminho)
 
-        for x in json:
-            chave = x.capitalize()
-            valor = list_convert(json[x])
-            dados = f"{Fore.YELLOW + chave + Fore.RESET}: {valor}"
-            print(dados)
-
-    else:
-        print(error_mensage)
+    for x in json:
+        chave = x.capitalize()
+        valor = list_convert(json[x])
+        dados = f"{Fore.YELLOW + chave + Fore.RESET}: {valor}"
+        print(dados)
 
 
-def gravar_json(caminho, novo_arquivo):
+def exibir_json_cv(caminho, item):
+    """
+exibe o conteudo de um arquivo json que segue o estilo chave única
+    """
     limpar_terminal()
-    verificar = IdentificarExtensao(caminho)
-    if verificar == ".json":
-        with open(caminho, "r") as arquivo:
-            json = load(arquivo)
+    IdentificarExtensao(caminho)
+    json = abrir_arquivo(caminho)
 
-        novo = open(novo_arquivo, "w")
-        for x in json:
-            chave = x.capitalize()
-            valor = list_convert(json[x])
-            dados = f"{chave}: {valor}"
-            novo.write(dados + "\n")
-        novo.close()
-    else:
-        print(error_mensage)
+    for x in json:
+        chave = x.capitalize()
+        valor = list_convert(json[x])
+        dados = f"{Fore.YELLOW + chave + Fore.RESET}: {valor}"
+        print(dados)
+
+
+def gravar_json(caminho, novo_arquivo, tipo=None):
+    """
+escreve o conteudo de um objeto json em um arquivo txt
+    """
+    limpar_terminal()
+    IdentificarExtensao(caminho)
+    json = abrir_arquivo(caminho)
+
+    novo = open(novo_arquivo, "w")
+    for x in json:
+        chave = x.capitalize()
+        valor = list_convert(json[x])
+        dados = f"{chave}: {valor}"
+        novo.write(dados + "\n")
+    novo.close()
 
 
 def converter_json(caminho):
+    """
+transforma todas as chaves e valores de um objeto json em um dicionário python
+    """
     limpar_terminal()
-    verificar = IdentificarExtensao(caminho)
-    if verificar == ".json":
-        with open(caminho, "r") as arquivo:
-            json = load(arquivo)
-        
-        dados = dict(json)
-        return dados
-    else:
-        print(error_mensage)
+    IdentificarExtensao(caminho)
+    json = abrir_arquivo(caminho)
+    dados = dict(json)
+    return dados
