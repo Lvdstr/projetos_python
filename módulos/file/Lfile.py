@@ -1,33 +1,5 @@
-from os import system, path, remove, rename, name
-from time import sleep
-from shutil import copy 
-from colorama import Fore, Style
-
-
-def limpar_terminal():
-	"""
-verifica qual é o sistema operacional e dependendo de qual é usa o comando
-correspondente para limpar a tela do terminal 
-	"""
-	match name:
-		case "nt": system("cls")
-		case _: system("clear")
-
-
-def exibir_diretório():
-	"""
-verifica qual é o sistema operacional e dependendo de qual é usa o comando
-correspondente para exibir todos os arquivos do diretório atual
-	"""
-	if name == "nt": system("dir")
-	else: system("ls")
-
-
-def list_verify(value):
-	if type(value) == list: 
-		print("sim")
-	else:
-		return False
+from shutil import copy
+from Lfile_auxiliar import *
 
 
 def criar_arquivo(nome):
@@ -59,32 +31,41 @@ def deletar_arquivo(nome_arquivo):
 	"""
 verifica se um arquivo existe, se existir apaga ele
 	"""
-	limpar_terminal()
-	if path.exists(nome_arquivo):
-		remove(nome_arquivo)
-	else:
-		print("o arquivo não existe para ser deletado")
+	try:
+		limpar_terminal()
+		if path.exists(nome_arquivo):
+			remove(nome_arquivo)
+		else:
+			print("o arquivo não existe para ser deletado")
+	except Exception as error:
+		print(error)
 
 
 def deletar_multiplos(extensao):
 	"""
 deleta multiplos arquivos com uma mesma extensão
 	"""
-	limpar_terminal()
-	system(f"rm *{extensao}")
+	try:
+		limpar_terminal()
+		system(f"rm *{extensao}")
+	except Exception as error:
+		print(error)
 
 
 def renomear_arquivo(antigo_nome, novo_nome):
 	"""
 verifica se um arquivo existe, se sim renomeia ele
 	"""
-	limpar_terminal()
-	if path.exists(antigo_nome):
-		rename(antigo_nome, novo_nome)
-		exibir_diretório()	
-	else:
-		print("o arquivo não existe ou não possui o nome informado")
-		exibir_diretório()
+	try:
+		limpar_terminal()
+		if path.exists(antigo_nome):
+			rename(antigo_nome, novo_nome)
+			exibir_diretório()	
+		else:
+			print("o arquivo não existe ou não possui o nome informado")
+			exibir_diretório()
+	except Exception as error:
+		print(error)
 
 
 def renomear_multiplos(nomes, novos_nomes):
@@ -110,14 +91,17 @@ def ler_arquivo(nome):
 	"""
 verifica se um arquivo existe, se existe exibe o conteúdo na tela
 	"""
-	limpar_terminal()
-	if name == "nt":
-		print("é windows mané")
-	else:
-		if path.exists(nome):
-			system("cat " + nome)
+	try:
+		limpar_terminal()
+		if name == "nt":
+			print("é windows mané")
 		else:
-			print("o arquivo não existe para ser lido bro")
+			if path.exists(nome):
+				system("cat " + nome)
+			else:
+				print("o arquivo não existe para ser lido bro")
+	except Exception as error:
+		print(error)
 
 
 def ler_arquivos(arquivos):
@@ -125,15 +109,18 @@ def ler_arquivos(arquivos):
 percorre uma lista de arquivos, verifica se o item atual existe
 exibe o conteúdo na tela
 	"""
-	limpar_terminal()
-	if name == "nt":
-		print("é windows mané")
-	else:
-		for x in arquivos:
-			if path.exists(x):
-				system("cat " + x)
-			else:
-				print("o arquivo não existe para ser lido bro")
+	try:
+		limpar_terminal()
+		if name == "nt":
+			print("é windows mané")
+		else:
+			for x in arquivos:
+				if path.exists(x):
+					system("cat " + x)
+				else:
+					print("o arquivo não existe para ser lido bro")
+	except Exception as error:
+		print(error)
 
 
 def copiar(arquivo, arquivo_copia):
