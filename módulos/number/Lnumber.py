@@ -1,33 +1,7 @@
 __name__ = "moduloLocal_number"
 
-from json import load
-from os import system, name
-from colorama import Fore
 
-
-def limpar_terminal():
-    match name:
-        case "nt": system("cls")
-        case _: system("clear")
-
-
-def verificação(value):
-    limpar_terminal()
-    if type(value) == int:
-        return True
-    elif type(value) == str:
-        if value.isdigit() == True:
-            value = int(value)
-            return True
-        else:
-            return False
-
-
-def sasa(values):
-    if values[0].isdigit() == False:
-        return f"o valor {values[0]} não é um numero, se fodeu"
-    else:
-        return f"o valor {values[0]} não é um numero, se fodeu"
+from Lnumber_auxiliar import *
 
 
 def operações_básicas(operator, value1, value2,):
@@ -50,7 +24,7 @@ def operações_básicas(operator, value1, value2,):
             case _:
                 return f"erro, o operador {operator} não é válido"
     else:
-        a = sasa([value1, value2])
+        a = verificação2([value1, value2])
         return a
 
 
@@ -78,8 +52,25 @@ def operações_avançadas(operator, value1="", value2=""):
             case _:
                 return f"erro, o operador {operator} não é válido"
     else:
-        a = sasa([value1, value2])
+        a = verificação2([value1, value2])
         return a
 
 
-print(operações_básicas("+", "a", 7))
+def maior(value):
+    limpar_terminal()
+    for x in value:
+        if type(x) == str:
+            print("error")
+        else:
+            maior_valor = max(value)
+    print(f" o maior valor é: {maior_valor}")
+
+
+def menor(value):
+    limpar_terminal()
+    for x in value:
+        if type(x) == str:
+            print("error")
+        else:
+            maior_valor = min(value)
+    print(f"o menor valor é: {maior_valor}")
